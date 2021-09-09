@@ -63,6 +63,16 @@ module afu
 
    // User register (memory mapped to address h0020) to test MMIO over CCI-P.
    logic [63:0]  user_reg;
+
+    logic[63:0] fifo_in, fifo_out;
+
+   fifo FIFO(
+    .clk(clk),
+    .rst_n(!rst),
+    .en(rx.c0.mmioWrValid || rx.c0.mmioRdValid),
+	  .d(fifo_in),
+    .q(fifo_out)  
+  );
    
    // The Rx c0 header is normally used for responses to reads from the host processor's memory.
    // For MMIO responses (i.e. when c0 mmmioRdValid or mmioWrValid is asserted), we need to 
@@ -79,7 +89,7 @@ module afu
         if (rst)
           begin 
 	     // Asnchronous reset for the memory-mapped register.
-	     user_reg <= '0;
+	     //user_reg <= '0;
           end
         else
           begin
@@ -90,7 +100,7 @@ module afu
 		  // memory-mapped register (h0020), then write the received data on channel c0 
 		  // to the register.
                   case (mmio_hdr.address)
-                    16'h0020: user_reg <= rx.c0.data[63:0];
+                    16'h0020: fifo_in <= rx.c0.data[63:0];
                   endcase
                end
           end
@@ -161,7 +171,7 @@ module afu
 		    // =============================================================   
 		    
                     // Provide the 64-bit data from the user register mapped to h0020.
-                    16'h0020: tx.c2.data <= user_reg;
+                    16'h0020: tx.c2.data <= fifo_in;
 
 		    // If the processor requests an address that is unused, return 0.
                     default:  tx.c2.data <= 64'h0;

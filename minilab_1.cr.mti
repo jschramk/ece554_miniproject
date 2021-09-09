@@ -1,0 +1,32 @@
+C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_std_afu.sv {0 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_std_afu.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_std_afu.sv(34): Cannot open `include file "platform_if.vh".
+-- Compiling module ccip_std_afu
+** Error: (vlog-13069) C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_std_afu.sv(50): near "pck_cp2af_sRx": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+
+} {3.0 4.0 5.0 6.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_interface_reg.sv {0 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_interface_reg.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_interface_reg.sv(37): (vlog-13006) Could not find the package (ccip_if_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+
+** Error: (vlog-13069) C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/ccip_interface_reg.sv(45): near "pck_cp2af_sRx_T0": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+
+} {3.0 4.0 5.0 6.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv {0 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv(43): Cannot open `include file "platform_if.vh".
+** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv(44): Cannot open `include file "afu_json_info.vh".
+-- Compiling module afu
+** Error: (vlog-13069) C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv(53): near "rx": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/afu.sv(62): (vlog-2163) Macro `AFU_ACCEL_UUID is undefined.
+
+
+} {3.0 5.0 6.0 7.0 8.0 9.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/ccip_mmio/hw/fifo_tb.sv {1 {vlog -work work -sv -stats=none {C:\Users\jschr\Documents\GitHub\ece554_miniproject\ccip_mmio\hw\fifo_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module fifo_tb
+
+Top level modules:
+	fifo_tb
+
+} {} {}}
