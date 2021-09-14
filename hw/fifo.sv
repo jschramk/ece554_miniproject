@@ -18,10 +18,10 @@ module fifo
 
   int i;
 
-  // reset set to 0
+  // reset values to 0
   always @(negedge rst_n) begin
 
-    for(i = 0; i < DEPTH; i++) regs[i] <= 0;
+    for(i = 0; i < DEPTH; i=i+1) regs[i] <= 0;
 
   end
 
