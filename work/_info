@@ -10,15 +10,15 @@ cModel Technology
 dC:/ECE352/Software/ModelSim
 vfifo
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1631230824
+Z1 !s110 1631636406
 !i10b 1
-!s100 >EaSX24Xf;0fP`WRgn@YH0
-IDESd@kQXS4mikof=^JC0?0
+!s100 P^ZO0<0nZ:X;RX8W2BaZC2
+IA7^6@^1c^I1aJ>]HW4XnU2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 fifo_sv_unit
 S1
 Z3 dC:/Users/jschr/Documents/GitHub/ece554_miniproject
-w1631228055
+w1631636398
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv
 L0 6
@@ -26,7 +26,7 @@ Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1631230824.000000
+Z5 !s108 1631636406.000000
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv|
 !i113 1

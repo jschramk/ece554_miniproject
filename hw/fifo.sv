@@ -5,20 +5,16 @@
 
 module fifo
   #(
-  parameter DEPTH=8,
-  parameter BITS=64
-  )
-  (
-  input clk,rst_n,en,
-  input [BITS-1:0] d,
-  output [BITS-1:0] q
-
-
-
+    parameter DEPTH=8,
+    parameter BITS=64
+  )(
+    input clk,rst_n,en,
+    input [BITS-1:0] d,
+    output [BITS-1:0] q
   );
 
   // shift register
-  reg [DEPTH-1:0] [BITS-1:0] regs;
+  reg[BITS-1:0] regs [DEPTH-1:0];
 
   // reset set to 0
   always @(negedge rst_n) begin
