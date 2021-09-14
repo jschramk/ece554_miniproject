@@ -14,16 +14,14 @@ module fifo
   );
 
   // shift register
-  reg [BITS-1:0] regs [DEPTH];
+  reg [BITS-1:0] regs [DEPTH-1:0];
+
+  int i;
 
   // reset set to 0
   always @(negedge rst_n) begin
-  
-    for(int i = 0; i < DEPTH; i++) begin
 
-      regs[i] = 64'h0;
-
-    end
+    for(i = 0; i < DEPTH; i++) regs[i] <= 0;
 
   end
 
