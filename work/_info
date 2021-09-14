@@ -10,15 +10,15 @@ cModel Technology
 dC:/ECE352/Software/ModelSim
 vfifo
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1631659498
+Z1 !s110 1631662790
 !i10b 1
-!s100 cizg2McM88`;DYUnK4<7m0
-IUX<XLH?@OZ;eL0@[H<YBo0
+!s100 8SzKIE<DDn=c?O;Dm[JCz3
+I:hePR`;N;XA:Tlm23DQJN3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 fifo_sv_unit
 S1
 Z3 dC:/Users/jschr/Documents/GitHub/ece554_miniproject
-w1631651870
+w1631660911
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv
 L0 6
@@ -26,7 +26,7 @@ Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1631659498.000000
+Z5 !s108 1631662790.000000
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv|
 !i113 1
@@ -58,16 +58,16 @@ vtpumac
 R0
 R1
 !i10b 1
-!s100 8<fiH[UJ2[dHUW<QjJ5Q63
-I?PQz1I<n=m7V]9QSl[lo40
+!s100 f=5cZ0mjHTHSThlT1>1:Y3
+IkV9UT`LH6^=^QiSozoE;T2
 R2
 !s105 tpumac_sv_unit
 S1
 R3
-w1631658558
+w1631659594
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv
-L0 2
+L0 4
 R4
 r1
 !s85 0
@@ -81,16 +81,16 @@ vtpumac_tb
 R0
 R1
 !i10b 1
-!s100 hEXJ;zWM^06F5U`b^c:342
-IaRA1??284SNNiX5TiW[il0
+!s100 CnA77[aVIzC;HBD=XchYn0
+I0[TLiG894^UM6R^1NM;0X2
 R2
 !s105 tpumac_tb_sv_unit
 S1
 R3
-w1631659479
+w1631659691
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac_tb.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac_tb.sv
-L0 1
+L0 3
 R4
 r1
 !s85 0

@@ -54,12 +54,14 @@ int main(int argc, char *argv[]) {
     
     // Test 100 different writes and reads to the user MMIO register.
     unsigned errors = 0;
+
     for (uint64_t i=0; i < 100; i++) {
+
       afu.write(USER_REG_ADDR, i);
 
       uint64_t result = afu.read(USER_REG_ADDR);
 
-      uint64_t exp = i > 8 ? i - 8 : 0;
+      uint64_t exp = i > 7 ? i - 7 : 0;
 
       if (result != exp) {
 
