@@ -64,7 +64,7 @@ module afu
    // User register (memory mapped to address h0020) to test MMIO over CCI-P.
    logic [63:0]  user_reg;
 
-    logic[63:0] fifo_in, fifo_out;
+   logic [63:0] fifo_in, fifo_out;
 
    fifo FIFO(
     .clk(clk),
@@ -171,7 +171,7 @@ module afu
 		    // =============================================================   
 		    
                     // Provide the 64-bit data from the user register mapped to h0020.
-                    16'h0020: tx.c2.data <= fifo_in;
+                    16'h0020: tx.c2.data <= fifo_out;
 
 		    // If the processor requests an address that is unused, return 0.
                     default:  tx.c2.data <= 64'h0;
