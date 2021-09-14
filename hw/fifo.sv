@@ -18,17 +18,16 @@ module fifo
 
   int i;
 
-  // reset values to 0
-  always @(negedge rst_n) begin
-
-    for(i = 0; i < DEPTH; i=i+1) regs[i] <= 0;
-
-  end
-
   // shift on clock when enabled
-  always @(posedge clk) begin
+  always @(posedge clk or negedge rst_n) begin
 
-    if(en) regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
+    if(~rst_n)
+
+      for(i = 0; i < DEPTH; i=i+1) regs[i] = 0;
+
+    else if(en)
+
+      regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
 
   end
 
