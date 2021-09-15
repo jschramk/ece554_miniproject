@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
       uint64_t result = afu.read(USER_REG_ADDR);
 
-      uint64_t exp = i > 7 ? i - 7 : 0;
+      uint64_t exp = i > 7 ? i - 8 : 0;
 
       if (result != exp) {
 
