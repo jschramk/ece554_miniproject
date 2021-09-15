@@ -55,17 +55,15 @@ int main(int argc, char *argv[]) {
     // Test 100 different writes and reads to the user MMIO register.
     unsigned errors = 0;
 
-    for (uint64_t i = 25; i < 125; i++) {
+    for (uint64_t i = 0; i < 100; i++) {
 
       afu.write(USER_REG_ADDR, i);
 
       uint64_t result = afu.read(USER_REG_ADDR);
 
-      cout << "i = " << i << ", val = " << result << endl;
+      uint64_t exp = i - 8;
 
-      uint64_t exp = i < 8 ? 0 : i - 8;
-
-      if (result != exp) {
+      if (i >= 8 && result != exp) {
 
         cerr << "ERROR, i = " << i << ": Read from MMIO register has incorrect value " << result << " instead of " << exp << endl;
         errors ++;
