@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 
       if (result != exp) {
 
-        cerr << i << ": ERROR: Read from MMIO register has incorrect value " << result << " instead of " << exp << endl;
+        cerr << "ERROR, i = " << i << ": Read from MMIO register has incorrect value " << result << " instead of " << exp << endl;
         errors ++;
 
       }
