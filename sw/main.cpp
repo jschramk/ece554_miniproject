@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
       uint64_t result = afu.read(USER_REG_ADDR);
 
-      cout << "i = " << i << ", val = " << result;
+      cout << "i = " << i << ", val = " << result << endl;
 
       uint64_t exp = i < 8 ? 0 : i - 8;
 
