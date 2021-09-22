@@ -1,0 +1,30 @@
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# No errors, testcase passed
+# 
+# ** Note: $stop    : C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv(158)
+#    Time: 6105 ps  Iteration: 1  Instance: /systolic_array_tb
+# Break in Module systolic_array_tb at C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv line 158
+
+
