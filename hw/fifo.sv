@@ -3,36 +3,35 @@
 // On reset all entries are set to 0
 // Shift causes fifo to shift out oldest entry to q, shift in d
 
-module fifo
-  #(
+module fifo #(
     parameter DEPTH=8,
     parameter BITS=64
-  )(
+)(
     input clk,rst_n,en,
     input [BITS-1:0] d,
     output [BITS-1:0] q
-  );
+);
 
-  // shift register
-  reg [BITS-1:0] regs [DEPTH-1:0];
+// shift register
+reg [BITS-1:0] regs [DEPTH-1:0];
 
-  int i;
+int i;
 
-  // shift on clock when enabled
-  always @(posedge clk or negedge rst_n) begin
+// shift on clock when enabled
+always @(posedge clk or negedge rst_n) begin
 
     if(~rst_n)
 
-      for(i = 0; i < DEPTH; i=i+1) regs[i] = 0;
+    for(i = 0; i < DEPTH; i=i+1) regs[i] = 0;
 
     else if(en)
 
-      regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
+    regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
 
-  end
+end
 
-  // output last entry
-  assign q = regs[DEPTH-1];
-  
+// output last entry
+assign q = regs[DEPTH-1];
+
 
 endmodule // fifo
