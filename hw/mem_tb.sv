@@ -22,18 +22,23 @@ module mem_tb();
    logic signed [BITS_AB-1:0] Bout [DIM-1:0];
    logic signed [BITS_AB-1:0] AoutReg [DIM-1:0];
    logic signed [BITS_AB-1:0] BoutReg [DIM-1:0];
+   
+   bit signed [BITS_AB-1:0] expected[DIM-1:0];
 
    always #5 clk = ~clk; 
 
    integer errors,mycycle;
 
-   systolic_array #(.BITS_AB(BITS_AB),
-                    .BITS_C(BITS_C),
-                    .DIM(DIM)
-                    ) DUT (.*);
+   /*memA #(.BITS_AB(BITS_AB),
+          .DIM(DIM)
+         ) DUT_A (.*);*/
+		 
+   memB #(.BITS_AB(BITS_AB),
+		  .DIM(DIM)
+		 ) DUT_B (.*);
 					
    systolic_array_tc #(.BITS_AB(BITS_AB),
-                       .BITS_C(BITS_C),
+                       .BITS_C(16),
                        .DIM(DIM)
                        ) satc;
 
@@ -65,14 +70,18 @@ module mem_tb();
 
       // check that C was properly reset
       for(int Row=0;Row<DIM;++Row) begin
-         Crow = {Row[ROWBITS-1:0]};
+         Arow = {Row[ROWBITS-1:0]};
          @(posedge clk) begin end
          for(int Col=0;Col<DIM;++Col) begin
-            if(Coutreg[Col] !== 0) begin
+            if(BoutReg[Col] !== 0) begin
 		         errors++;
-		         $display("Error! Reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", Coutreg[Col],Row, Col); 
+		         $display("Error! B reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", BoutReg[Col],Row, Col); 
 	          end
-           end
+			/*if(AoutReg[Col] !== 0) begin
+				errors++;
+				$display("Error! A reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", AoutReg[Col],Row, Col); 
+           end*/
+		 end
       end
       
 
@@ -80,85 +89,48 @@ module mem_tb();
 
          // instantiate test case
          satc = new();
-         
          @(posedge clk) begin end
-         // load C with 0 one row at a time
-         for(int rowcol=0;rowcol<DIM;++rowcol) begin
-            Cin[rowcol] = {BITS_C{1'b0}};
-         end
-         @(posedge clk) begin end
-         WrEn = 1'b1;
-         for(int Row=0;Row<DIM;++Row) begin
-            Crow = {Row[ROWBITS-1:0]};
-            @(posedge clk) begin end
-         end
-         WrEn = 1'b0;
-         
-         @(posedge clk) begin end
-         // check that C was properly initialized to zero
-         for(int Row=0;Row<DIM;++Row) begin
-            Crow = {Row[ROWBITS-1:0]};
-            @(posedge clk) begin end
-            for(int Col=0;Col<DIM;++Col) begin
-               if(Coutreg[Col] !== 0) begin
-		          errors++;
-		          $display("Error! C Init was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", Coutreg[Col],Row, Col); 
-	           end
-            end
-         end
-         
-         @(posedge clk) begin end
-         en = 1'b1; // enabled throughout following DIM*3 cycles      
-         // DIM cycles to fill, DIM cycles to compute, DIM cycles to drain
-         for(int cyc=0;cyc<(DIM*3-2);++cyc) begin
-            // set A, B values from the testcase
-            for(int rowcol=0;rowcol<DIM;++rowcol) begin
-               A[rowcol] = satc.get_next_A(rowcol);
-               B[rowcol] = satc.get_next_B(rowcol);
-            end
-            @(posedge clk) begin end
-            mycycle = satc.next_cycle();
-         end
-         
-         @(posedge clk) begin end
-         // compute is done
-         en = 1'b0;
-         
-         @(posedge clk) begin end
-         // read Cout row by row and check against test case
-         for(int Row=0;Row<DIM;++Row) begin
-            Crow = {Row[ROWBITS-1:0]};
-            @(posedge clk) begin end
-            errors = errors + satc.check_row_C(Row,Cout);
-            @(posedge clk) begin end
-         end
-         
-         if (errors > 0) begin
-            $display("Errors found: %d, dumping test case\n",errors);
-            satc.dump();
-            $display("Dumping result");
-            @(posedge clk) begin end
-            for(int Row=0;Row<DIM;++Row) begin
-               Crow = {Row[ROWBITS-1:0]};
-               @(posedge clk) begin end
-               for(int Col=0;Col<DIM;++Col) begin
-                  $write("%5d ",Cout[Col]);
-               end
-               $display("");
-               @(posedge clk) begin end
-            end
-         end
-         else begin
-            $display("No errors, testcase passed\n");
-         end
-
-         satc = null;
-         
-      end // for (int test=0;test<TESTS;++test)
-               
+		 for (int i = 0; i < DIM; i++) begin
+			for (int j = 0; j < DIM; j++) begin
+				Bin[j] = satc.B[i][j];
+			end
+			en = 1'b1;
+			@(posedge clk) begin end
+		 end
+		 
+		 for (int i = 0; i < 3*DIM - 2; i++) begin
+			for (int j = 0; j < DIM; j++) begin
+				expected[j] = satc.get_next_B(j);
+			end
+			@(posedge clk) begin end
+			for (int j = 0; j < DIM; j++) begin
+				if (Bout[j] !== expected[j]) begin
+					$display("Error! Incorrect value. Expected: %d, Got: %d for Row %d Col %d", expected[j], Bout[j], i, j);
+					errors++;
+				end
+			end
+			satc.next_cycle();
+		 end
+		 if (errors == 0) begin
+			$display("No errors, testcase passed\n");
+		 end else begin
+			$display("\n");
+		 end
+		 
+		 en = 1'b0;
+		 @(posedge clk) begin end
+		rst_n = 1'b0; // active low reset
+		@(posedge clk) begin end
+		rst_n = 1'b1; // reset finished
+		@(posedge clk) begin end
+		
+		 satc = null;
+	  end
+	  
+	  
 	  $stop;
    end // initial begin
 
-endmodule // systolic_array_tb
+endmodule // mem_tb
 
    

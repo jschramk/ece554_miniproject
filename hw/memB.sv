@@ -9,7 +9,7 @@ module memB #(
 	output signed [BITS_AB-1:0] Bout [DIM-1:0] 
 );
 
-logic [$clog2(DIM)-1:0] count;
+logic [$clog2(DIM):0] count;
 
 genvar col;
 
@@ -24,7 +24,7 @@ generate
 			.clk(clk),
 			.rst_n(rst_n),
 			.en(en),
-			.d(count < DIM ? Bin[col] : 0),
+			.d(count < DIM ? Bin[col] : {BITS_AB{1'b0}}),
 			.q(Bout[col])
 		);
 
