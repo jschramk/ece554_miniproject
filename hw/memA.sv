@@ -10,10 +10,7 @@ module memA #(
 	output signed [BITS_AB-1:0] Aout [DIM-1:0]
 );
 
-logic [$clog2(DIM)-1:0] count;
-
 genvar row;
-
 generate
 
 	for (row = 0; row < DIM; row++) begin
@@ -36,23 +33,5 @@ generate
 	end
 
 endgenerate
-
-// doesn't look like this was being used
-// assign Bout = fifoFeeder[location];
-
-// use a counter to determine when to load zeroes, set to 0 on reset
-always @(posedge clk or negedge rst_n) begin
-
-if (!rst_n) begin
-
-	count = 0;
-
-end else if (en) begin
-
-	if (count < DIM) count++;
-
-end
-
-end
 
 endmodule

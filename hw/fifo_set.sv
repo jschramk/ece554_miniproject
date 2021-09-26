@@ -32,7 +32,7 @@ always @(posedge clk or negedge rst_n) begin
     end else if(WrEn) begin // new WrEn condition 
     
         // set top INPUT_DEPTH entries to in_array, leaving other values unchanged (overwrite, no shift)
-        regs[DEPTH-1:0] <= {in_array, regs[DEPTH-INPUT_DEPTH-1:0]};
+        regs[DEPTH-1:DEPTH-INPUT_DEPTH] <= in_array;
     
     end else if(en) begin
     

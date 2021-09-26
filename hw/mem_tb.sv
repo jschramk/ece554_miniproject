@@ -23,15 +23,16 @@ module mem_tb();
    logic signed [BITS_AB-1:0] AoutReg [DIM-1:0];
    logic signed [BITS_AB-1:0] BoutReg [DIM-1:0];
    
-   bit signed [BITS_AB-1:0] expected[DIM-1:0];
+   bit signed [BITS_AB-1:0] expectedB[DIM-1:0];
+   bit signed [BITS_AB-1:0] expectedA[DIM-1:0];
 
    always #5 clk = ~clk; 
 
    integer errors,mycycle;
 
-   /*memA #(.BITS_AB(BITS_AB),
+   memA #(.BITS_AB(BITS_AB),
           .DIM(DIM)
-         ) DUT_A (.*);*/
+         ) DUT_A (.*);
 		 
    memB #(.BITS_AB(BITS_AB),
 		  .DIM(DIM)
@@ -77,10 +78,10 @@ module mem_tb();
 		         errors++;
 		         $display("Error! B reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", BoutReg[Col],Row, Col); 
 	          end
-			/*if(AoutReg[Col] !== 0) begin
+			if(AoutReg[Row] !== 0) begin
 				errors++;
-				$display("Error! A reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", AoutReg[Col],Row, Col); 
-           end*/
+				$display("Error! A reset was not conducted properly. Expected: 0, Got: %d for Row %d Col %d", AoutReg[Row],Row, Col); 
+           end
 		 end
       end
       
@@ -91,21 +92,41 @@ module mem_tb();
          satc = new();
          @(posedge clk) begin end
 		 for (int i = 0; i < DIM; i++) begin
+			
 			for (int j = 0; j < DIM; j++) begin
 				Bin[j] = satc.B[i][j];
 			end
 			en = 1'b1;
 			@(posedge clk) begin end
 		 end
+		 en = 1'b0;
+
+		@(posedge clk) begin end
+		 for (int i = 0; i < DIM; i++) begin
+			Arow = {i[ROWBITS-1:0]};
+			for (int j = 0; j < DIM; j++) begin
+				Ain[j] = satc.A[i][j];
+			end
+			
+			WrEn = 1'b1;
+			@(posedge clk) begin end
+		 end
+		 WrEn = 1'b0;
+		 en = 1'b1;
 		 
 		 for (int i = 0; i < 3*DIM - 2; i++) begin
 			for (int j = 0; j < DIM; j++) begin
-				expected[j] = satc.get_next_B(j);
+				expectedB[j] = satc.get_next_B(j);
+				expectedA[j] = satc.get_next_A(j);
 			end
 			@(posedge clk) begin end
 			for (int j = 0; j < DIM; j++) begin
-				if (Bout[j] !== expected[j]) begin
-					$display("Error! Incorrect value. Expected: %d, Got: %d for Row %d Col %d", expected[j], Bout[j], i, j);
+				if (Bout[j] !== expectedB[j]) begin
+					$display("Error! Incorrect value. Expected: %d, Got: %d for Row %d Col %d", expectedB[j], Bout[j], i, j);
+					errors++;
+				end
+				if (Aout[j] !== expectedA[j]) begin
+					$display("Error! Incorrect value. Expected: %d, Got: %d for Row %d Col %d", expectedA[j], Aout[j], i, j);
 					errors++;
 				end
 			end
