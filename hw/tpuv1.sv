@@ -51,5 +51,31 @@ systolic_array #(
     .Cout()
 );
 
+always @(posedge clk) begin
+
+    if(r_w) begin // on write, load data based on addr
+        
+        if(addr >= 16'h100 && addr <= 16'h13f) begin
+            
+            // write into A
+
+        end else if (addr >= 16'h200 && addr <= 16'h23f) begin
+            
+            // write into B
+
+        end else if (addr >= 16'h300 && addr <= 16'h37f) begin
+            
+            // write into C
+
+        end else if(addr == 16'h400) begin
+            
+            // start computation
+
+        end
+
+    end
+
+end
+
 
 endmodule;
