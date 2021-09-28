@@ -12,11 +12,11 @@ module tpuv1 #(
 );
 
 memA #(
-    .BITS_AB(),
-    .DIM()
+    .BITS_AB(BITS_AB),
+    .DIM(DIM)
 ) MEMA (
-    .clk(),
-    .rst_n(),
+    .clk(clk),
+    .rst_n(rst_n),
     .en(),
     .WrEn(), 
 	.Ain(), 
@@ -25,23 +25,23 @@ memA #(
 );
 
 memB #(
-    .BITS_AB(),
-    .DIM()
+    .BITS_AB(BITS_AB),
+    .DIM(DIM)
 ) MEMB (
-    .clk(),
-    .rst_n(),
+    .clk(clk),
+    .rst_n(rst_n),
     .en(),
 	.Bin(), 
 	.Bout() 
 );
 
 systolic_array #(
-    .BITS_AB(),
-    .BITS_C(),
-    .DIM()
+    .BITS_AB(BITS_AB),
+    .BITS_C(BITS_C),
+    .DIM(DIM)
 ) SYS_ARR (
-    .clk(),
-    .rst_n(),
+    .clk(clk),
+    .rst_n(rst_n),
     .WrEn(),
     .en(),
     .A(),
