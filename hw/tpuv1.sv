@@ -7,7 +7,7 @@ module tpuv1 #(
 ) (
     input clk, rst_n, r_w, // r_w=0 read, =1 write
     input [DATAW-1:0] dataIn,
-    output logic [DATAW-1:0] dataOut,
+    output [DATAW-1:0] dataOut,
     input [ADDRW-1:0] addr
 );
 
@@ -34,6 +34,17 @@ generate
 		assign CHalf[i] = dataIn[16*i + 15: 16*i];
 	end
 endgenerate
+
+assign AWrEn = (count == 0 || count > 3*DIM-2) ? (r_w ? (addr >= 16'h100 && addr <= 16'h13f) : 1'b0) : 1'b0;
+assign Arow = addr[7:0] / 8;
+assign Ben = ((count == 0 || count > 3*DIM-2) ? (r_w ? (addr >= 16'h200 && addr <= 16'h23f) : 1'b0) : 1'b0) || (count > 0);
+assign Crow = addr[6:4];
+assign high = addr[3];
+assign SAWrEn = (count == 0 || count > 3*DIM-2) ? (r_w ? (addr >= 16'h300 && addr <= 16'h37f) : 1'b0) : 1'b0;
+assign CDataIn = high ? {CHalf, CDataOut[3:0]} : {CDataOut[7:4], CHalf};
+assign dataOut = high ? COutRaw[127: 64] : COutRaw[63:0];
+assign Aen = (count > 0);
+assign SAen = (count > 0 || count < 3*DIM-2) || (r_w && addr == 16'h0400) || (!r_w && addr >= 16'h300 && addr <= 16'h37f);
 
 memA #(
     .BITS_AB(BITS_AB),
@@ -75,6 +86,17 @@ systolic_array #(
     .Cout(CDataOut)
 );
 
+always @(posedge clk or negedge rst_n) begin
+	if (!rst_n) begin
+		count <= 0;
+	end else if (count > 3*DIM-2) begin
+		count <= 0;
+	end else if (addr == 16'h0400 || count > 0) begin
+		count++;
+	end
+end
+
+/*
 always @(posedge clk or negedge rst_n) begin
 
 	if (!rst_n) begin
@@ -137,7 +159,7 @@ always @(posedge clk or negedge rst_n) begin
 		count++;
 		SAen <= 1;
 	end
-end
+end*/
 
 
 endmodule
