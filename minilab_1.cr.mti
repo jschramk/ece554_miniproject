@@ -1,4 +1,11 @@
-C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv
+C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module tpuv1
+
+Top level modules:
+	tpuv1
+
+} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling module fifo_tb
 
@@ -26,30 +33,15 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 ** Error: (vlog-13069) C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/ccip_interface_reg.sv(45): near "pck_cp2af_sRx_T0": syntax error, unexpected IDENTIFIER, expecting ')'.
 
 
-} {3.0 4.0 5.0 6.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv {0 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
+} {3.0 4.0 5.0 6.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(68): (vlog-2730) Undefined variable: 'Crow'.
+-- Compiling package mem_tb_sv_unit
+-- Compiling module mem_tb
 
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(71): (vlog-2730) Undefined variable: 'Coutreg'.
+Top level modules:
+	mem_tb
 
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(87): (vlog-2730) Undefined variable: 'Cin'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(92): (vlog-2730) Undefined variable: 'Crow'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(100): (vlog-2730) Undefined variable: 'Crow'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(103): (vlog-2730) Undefined variable: 'Coutreg'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(116): (vlog-2730) Undefined variable: 'A'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(117): (vlog-2730) Undefined variable: 'B'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(130): (vlog-2730) Undefined variable: 'Crow'.
-
-** Error: C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv(142): (vlog-2730) Undefined variable: 'Crow'.
-
-
-} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
+} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling package systolic_array_tb_sv_unit
 -- Compiling module systolic_array_tb
@@ -72,6 +64,14 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 
 Top level modules:
 	tpumac_tb
+
+} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling package tpuv1_integration_tb_sv_unit
+-- Compiling module tpuv1_integration_tb
+
+Top level modules:
+	tpuv1_integration_tb
 
 } {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
