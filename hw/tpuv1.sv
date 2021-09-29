@@ -2,14 +2,38 @@ module tpuv1 #(
     parameter BITS_AB=8,
     parameter BITS_C=16,
     parameter DIM=8,
-    parameter ADDRW=16;
-    parameter DATAW=64;
+    parameter ADDRW=16,
+    parameter DATAW=64
 ) (
     input clk, rst_n, r_w, // r_w=0 read, =1 write
     input [DATAW-1:0] dataIn,
-    output [DATAW-1:0] dataOut,
+    output logic [DATAW-1:0] dataOut,
     input [ADDRW-1:0] addr
 );
+
+logic Aen, Ben, SAen, AWrEn, SAWrEn, high;
+logic [$clog2(DIM)-1:0] Arow;
+logic [$clog2(DIM)-1:0] Crow;
+logic signed [BITS_AB-1:0] Aout [DIM-1:0];
+logic signed [BITS_AB-1:0] Bout [DIM-1:0];
+logic [$clog2(3*DIM-2):0] count;
+logic signed [BITS_AB-1:0] ABDataIn [DIM-1:0];
+logic signed [BITS_C-1:0] CDataIn [DIM-1:0];
+logic signed [BITS_C-1:0] CDataOut [DIM-1:0];
+logic signed [BITS_C-1:0] CHalf [(DIM/2) - 1:0];
+logic signed [DATAW*2-1:0] COutRaw;
+
+
+genvar i;
+generate
+	for (i = 0; i < DIM; i++)  begin
+		assign ABDataIn[i] = dataIn[8*i+7:i*8];
+		assign COutRaw[16*i + 15: 16*i] = CDataOut[i];
+	end
+	for (i = 0; i < DIM/2; i++) begin
+		assign CHalf[i] = dataIn[16*i + 15: 16*i];
+	end
+endgenerate
 
 memA #(
     .BITS_AB(BITS_AB),
@@ -19,7 +43,7 @@ memA #(
     .rst_n(rst_n),
     .en(Aen),
     .WrEn(AWrEn), 
-	.Ain(dataIn), 
+	.Ain(ABDataIn), 
 	.Arow(Arow), 
 	.Aout(Aout)
 );
@@ -31,7 +55,7 @@ memB #(
     .clk(clk),
     .rst_n(rst_n),
     .en(Ben),
-	.Bin(dataIn), 
+	.Bin(ABDataIn), 
 	.Bout(Bout) 
 );
 
@@ -43,28 +67,26 @@ systolic_array #(
     .clk(clk),
     .rst_n(rst_n),
     .WrEn(SAWrEn),
-    .en(SAEn),
+    .en(SAen),
     .A(Aout),
     .B(Bout),
-    .Cin(dataIn),
+    .Cin(CDataIn),
     .Crow(Crow),
-    .Cout(dataOut)
+    .Cout(CDataOut)
 );
 
-logic Aen, Ben, SAen, AWrEn, SAWrEn;
-logic [$clog2(DIM)-1:0] Arow;
-logic [$clog2(DIM)-1:0] Crow;
-logic signed [BITS_AB-1:0] Aout [DIM-1:0];
-logic signed [BITS_AB-1:0] Bout [DIM-1:0];
-logic [$clog2(3*DIM-2):0] count;
+always @(posedge clk or negedge rst_n) begin
 
-always @(posedge clk) begin
+	if (!rst_n) begin
+		count <= 0;
+	end
 
 	Aen <= 0;
 	Ben <= 0;
 	SAen <= 0;
 	AWrEn <= 0;
-	SAWrEn <= 0;	
+	SAWrEn <= 0;
+	high <= 0;
 
 	if (count == 0 || count > 3*DIM-2) begin
 		if(r_w) begin // on write, load data based on addr
@@ -85,15 +107,18 @@ always @(posedge clk) begin
 			end else if (addr >= 16'h300 && addr <= 16'h37f) begin
 				
 				// write into C
-				Crow <= addr[7:0] / 8;
+				Crow <= addr[6:4];
+				high <= addr[3];
 				SAWrEn <= 1;
 				count <= 0;
+				
+				CDataIn <= high ? {CHalf, CDataOut[3:0]} : {CDataOut[7:4], CHalf};
 
 			end else if(addr == 16'h400) begin
 				
 				// start computation
 				count++;
-				SAEn <= 1;
+				SAen <= 1;
 				
 			end
 
@@ -101,16 +126,18 @@ always @(posedge clk) begin
 			if (addr >= 16'h300 && addr <= 16'h37f) begin
 				
 				// read from C
-				Crow <= addr[7:0] / 8;
-				SAEn <= 1;
+				Crow <= addr[6:4];
+				high <= addr[3];
+				SAen <= 1;
+				dataOut <= high ? COutRaw[127: 64] : COutRaw[63:0];
 				
 			end
 		end
 	end else begin
 		count++;
-		SAEn <= 1;
+		SAen <= 1;
 	end
 end
 
 
-endmodule;
+endmodule
