@@ -1,4 +1,4 @@
-/*
+
 // Copyright (c) 2020 University of Florida
 //
 // This program is free software: you can redistribute it and/or modify
@@ -47,80 +47,79 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-    try
-    {
-        // Create an AFU object to provide basic services for the FPGA. The
-        // constructor searchers available FPGAs for one with an AFU with the
-        // the specified ID
-        AFU afu(AFU_ACCEL_UUID);
+  try
+  {
+    // Create an AFU object to provide basic services for the FPGA. The
+    // constructor searchers available FPGAs for one with an AFU with the
+    // the specified ID
+    AFU afu(AFU_ACCEL_UUID);
 
-        // Test 100 different writes and reads to the user MMIO register.
-        unsigned errors = 0;
+    // Test 100 different writes and reads to the user MMIO register.
+    unsigned errors = 0;
 
-        for (uint64_t i = 0; i < 100; i++)
-        {
-
-            afu.write(USER_REG_ADDR, i);
-
-            uint64_t result = afu.read(USER_REG_ADDR);
-
-            uint64_t exp = i - 8;
-
-            if (i >= 8 && result != exp)
-            {
-
-                cerr << "ERROR, i = " << i << ": Read from MMIO register has incorrect value " << result << " instead of " << exp << endl;
-                errors++;
-            }
-        }
-
-        if (errors == 0)
-        {
-            cout << "All MMIO tests succeeded." << endl;
-            return EXIT_SUCCESS;
-        }
-        else
-        {
-            cout << "MMIO tests failed." << endl;
-            return EXIT_FAILURE;
-        }
-    }
-    // Exception handling for all the runtime errors that can occur within
-    // the AFU wrapper class.
-    catch (const fpga_result &e)
+    for (uint16_t i = 0x300; i <= 0x37f; i += 0x8)
     {
 
-        // Provide more meaningful error messages for each exception.
-        if (e == FPGA_BUSY)
-        {
-            cerr << "ERROR: All FPGAs busy." << endl;
-        }
-        else if (e == FPGA_NOT_FOUND)
-        {
-            cerr << "ERROR: FPGA with accelerator " << AFU_ACCEL_UUID
-                 << " not found." << endl;
-        }
-        else
-        {
-            // Print the default error string for the remaining fpga_result types.
-            cerr << "ERROR: " << fpgaErrStr(e) << endl;
-        }
-    }
-    catch (const runtime_error &e)
-    {
-        cerr << e.what() << endl;
-    }
-    catch (const opae::fpga::types::no_driver &e)
-    {
-        cerr << "ERROR: No FPGA driver found." << endl;
+      afu.write(i, i);
+
+      uint64_t result = afu.read(i);
+
+      uint64_t exp = i;
+
+      if(result != exp) {
+
+        fprintf(cerr, "ERROR (address: %h): got: %h, expected %h", i, result, exp);
+
+      }
+
+      errors++;
     }
 
-    return EXIT_FAILURE;
+    if (errors == 0)
+    {
+      cout << "All MMIO tests succeeded." << endl;
+      return EXIT_SUCCESS;
+    }
+    else
+    {
+      cout << "MMIO tests failed." << endl;
+      return EXIT_FAILURE;
+    }
+  }
+  // Exception handling for all the runtime errors that can occur within
+  // the AFU wrapper class.
+  catch (const fpga_result &e)
+  {
+
+    // Provide more meaningful error messages for each exception.
+    if (e == FPGA_BUSY)
+    {
+      cerr << "ERROR: All FPGAs busy." << endl;
+    }
+    else if (e == FPGA_NOT_FOUND)
+    {
+      cerr << "ERROR: FPGA with accelerator " << AFU_ACCEL_UUID
+           << " not found." << endl;
+    }
+    else
+    {
+      // Print the default error string for the remaining fpga_result types.
+      cerr << "ERROR: " << fpgaErrStr(e) << endl;
+    }
+  }
+  catch (const runtime_error &e)
+  {
+    cerr << e.what() << endl;
+  }
+  catch (const opae::fpga::types::no_driver &e)
+  {
+    cerr << "ERROR: No FPGA driver found." << endl;
+  }
+
+  return EXIT_FAILURE;
 }
 
-*/
-
-
+/*
 
 
 // Copyright (c) 2020 University of Florida
@@ -424,3 +423,4 @@ int main(int argc, char *argv[])
   return EXIT_FAILURE;
 }
 
+*/
