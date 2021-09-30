@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 
         //printf(stderr, "ERROR (address: %h): got: %h, expected %h", i, result, exp);
 
-        cerr << "ERROR (address: " << i << "): got: " << result << ", expected: " << exp;
+        cerr << "ERROR (address: " << i << "): got: " << result << ", expected: " << exp << "\n";
 
       }
 
