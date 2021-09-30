@@ -72,9 +72,10 @@ int main(int argc, char *argv[])
 
         cerr << "ERROR (address: " << i << "): got: " << result << ", expected: " << exp << "\n";
 
+        errors++;
+
       }
 
-      errors++;
 
     }
 

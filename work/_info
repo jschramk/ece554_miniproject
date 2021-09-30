@@ -10,7 +10,7 @@ cModel Technology
 dC:/ECE352/Software/ModelSim
 Xafu_tc_svh_unit
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1633036391
+Z1 !s110 1633042707
 !i10b 1
 !s100 i]hL3]NCH]C_HSfi^e9PJ2
 IdkmSf7DeU;9_SJUjf3DiZ2
@@ -26,7 +26,7 @@ Z3 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z4 !s108 1633036391.000000
+Z4 !s108 1633042707.000000
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/afu_tc.svh|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/afu_tc.svh|
 !i113 1
@@ -288,7 +288,7 @@ R17
 R5
 Xsystolic_array_tc_svh_unit
 R0
-Z18 !s110 1633036392
+Z18 !s110 1633042708
 !i10b 1
 !s100 azE3XfS`@ALH_ob;ajET81
 IO0^BG_Njf3_nY7>Kk::c`1
@@ -304,7 +304,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z19 !s108 1633042708.000000
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tc.svh|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tc.svh|
 !i113 1
@@ -327,7 +327,7 @@ R3
 r1
 !s85 0
 31
-Z19 !s108 1633036392.000000
+R19
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv|
 !i113 1
@@ -396,7 +396,7 @@ Z21 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.
 Z22 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv
 L0 9
 R3
-Z23 !s108 1633036390.000000
+Z23 !s108 1633042706.000000
 Z24 !s107 C:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\afu_tc.svh|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv|
 Z25 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv|
 !i113 1
