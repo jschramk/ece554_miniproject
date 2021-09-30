@@ -1,0 +1,1497 @@
+# Compile of tpuv1_integration_tb.sv was successful.
+# Compile of afu.sv failed with 4 errors.
+# Compile of afu_old.sv failed with 4 errors.
+# Compile of afu_tc.svh was successful.
+# Compile of ccip_interface_reg.sv failed with 2 errors.
+# Compile of ccip_std_afu.sv failed with 2 errors.
+# Compile of fifo.sv was successful.
+# Compile of fifo_set.sv was successful.
+# Compile of fifo_tb.sv was successful.
+# Compile of mem_tb.sv was successful.
+# Compile of memA.sv was successful.
+# Compile of memB.sv was successful.
+# Compile of memB_jacob.sv failed with 1 errors.
+# Compile of systolic_array.sv was successful.
+# Compile of systolic_array_tb.sv was successful.
+# Compile of systolic_array_tc.svh was successful.
+# Compile of tpumac.sv was successful.
+# Compile of tpumac_tb.sv was successful with warnings.
+# Compile of tpuv1.sv was successful.
+# 19 compiles, 5 failed with 13 errors.
+vsim work.tpuv1_integration_tb
+# vsim work.tpuv1_integration_tb 
+# Start time: 17:22:33 on Sep 29,2021
+# Loading sv_std.std
+# Loading work.tpuv1_integration_tb_sv_unit
+# Loading work.tpuv1_integration_tb
+# Loading work.tpuv1
+# Loading work.memA
+# Loading work.memB
+# Loading work.systolic_array
+# Loading work.fifo_set
+# Loading work.fifo
+# Loading work.tpumac
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# WARNING: No extended dataflow license exists
+run -all
+# Errors found:          64, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+add wave -position insertpoint sim:/tpuv1_integration_tb/DUT/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jschr  Hostname: SCHR-LAPTOP  ProcessID: 15332
+#           Attempting to use alternate WLF file "./wlft9d45s2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9d45s2
+# Can't move the Now cursor.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:          64, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:          64, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+add wave -position insertpoint sim:/tpuv1_integration_tb/DUT/MEMA/*
+add wave -position insertpoint sim:/tpuv1_integration_tb/DUT/MEMB/*
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:          64, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+# -18228     0     0     0     0     0     0     0 
+# 22260     0     0     0     0     0     0     0 
+# -16492     0     0     0     0     0     0     0 
+# 19964     0     0     0     0     0     0     0 
+# 10664     0     0     0     0     0     0     0 
+# -25296     0     0     0     0     0     0     0 
+# 28148     0     0     0     0     0     0     0 
+# 24368     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+add wave -position insertpoint  \
+{sim:/tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO/regs}
+add wave -position insertpoint  \
+{sim:/tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO/regs}
+# Compile of tpuv1.sv failed with 1 errors.
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0300
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0308
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0310
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0318
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0320
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0328
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0330
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0338
+# Error! C Init was not conducted properly. Expected: 0, Got:                    X at address 0340
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0348
+# Error! C Init was not conducted properly. Expected: 0, Got:                    X at address 0350
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0358
+# Error! C Init was not conducted properly. Expected: 0, Got:                    X at address 0360
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0368
+# Error! C Init was not conducted properly. Expected: 0, Got:                    x at address 0378
+# Errors found:          79, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:          64, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+# -18228     0     0     0     0     0     0     0 
+# 22260     0     0     0     0     0     0     0 
+# -16492     0     0     0     0     0     0     0 
+# 19964     0     0     0     0     0     0     0 
+# 10664     0     0     0     0     0     0     0 
+# -25296     0     0     0     0     0     0     0 
+# 28148     0     0     0     0     0     0     0 
+# 24368     0     0     0     0     0     0     0 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 1455 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of tpuv1_integration_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1_integration_tb_sv_unit
+# Loading work.tpuv1_integration_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# Errors found:         129, dumping test case
+# 
+# A x B
+# -125    2 -113   71  -45   54   24  -37   119    2   58  -79  117  125  -17   -9 
+#  116 -119   41  -96   57  105  -76   88   -50    1  -49   29   59  124  -95    3 
+#  -44   62   95    3   87  111  120  -36    77  -34  -56   51  -54  -56  -37   74 
+#  -11   70  -32  -58  -22   -7 -128   38    64   72   61 -101  113  -90   -2 -108 
+#    4  -93 -114   99    3   24  -39  -78   -82 -112  100  -10  -48  -87 -121    4 
+#   -9 -104  -72  -92  -82  -46  -27   57    91  102   24    7 -124    8  -62  -22 
+#   57   72  120   84  126 -101 -111    6    16  -92   84  110 -120 -102  -15   24 
+#   76    5  -85  -41  113   36  -48  -33   -88  103  -75    2  -34  -81  -18 -104 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -6888 13235  4898   393 -6540 -10543  8377 -11843 
+# 12688 12189  -357 -8847 -16139  2593 -5843 -1057 
+#  7226 -16210 13417 22851 28139 -19407 -27224 11818 
+# -15210 14400 -21784 -6708 14009 26153  -831 -2753 
+# 10862  8585 20662 -23134 16536 -3331 12925 -12783 
+# -10213  8549 -12853   957 -2755  3194 25034 -1515 
+# -4028 -11430 -1416 -18944 -32015   839 -19844 -1051 
+# -4229 -7872 17029 -12277  6138 16596 -13131  -591 
+# Errors found:         193, dumping test case
+# 
+# A x B
+#  -13  126  -61   54  -59  -30  -52  -12  -102   26   40    5  -97 -101   74   63 
+#   74  -45  104 -118   75  -59  -68  -19    10 -108  -73  -90   13  -96  -77  -97 
+#  106  -27  -71  -47  115   23    3  -88   -88  -61  -15 -124  -73  -65 -116   65 
+#  -41   12  127   62    9  -36  -73   28    31  -16   87  -74  -54 -124  -60  -88 
+#  -29  -52  -74  117   42 -125 -105  -91   -29   79  127   -4 -121  -76   12  -61 
+#   74   16  -65  -60  -10    5  -19   95    29   79   31  -78  -65    5   96   61 
+#   91  -46 -118   -3   74  -33 -109   19   -18 -117   21  -32  100  114 -128 -110 
+#  -32   19   99  104   96 -118  115   62    50  -25  -84  -73   25  -81  -91 -108 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# 10805 -11736 -12612 -2721  8025 -14136 -2668 -12973 
+# -24420 12023  2283  8121 -21498 -7490  9626 27529 
+# -13413 23506 25960 19316 -20222  1174 32191 12380 
+# -3543 -5393 -2885 -18557 -13835 -24408 -18962  1313 
+#  5074 15507 20823 24638 -8511 -10193 13647  -698 
+#  1999  4574 -11947  4753  2375 -6421  9531 -3090 
+#   358 30097 12997 23828 -17883 -16487 -31449  6200 
+# -7210 -27330 10637 -21228  -388 -17721 13443 26560 
+# Errors found:         257, dumping test case
+# 
+# A x B
+#  -66  -60   42   87  -89   77  108    1  -105   97   70  -27   84 -103  -83 -100 
+#  122  -94  110   30 -118   -9  101  -48    -8   46  114  -16 -128   -8  -20  -48 
+#   52  -72  -94  -88  -16    7  -64    9   -29  125   32  -29  -27  -49   65 -110 
+#   14  -30  -27   51   72 -122  -27   83    68 -117   30  -87  -55   46  123  -33 
+#  -66   10  -49   98   32  -21   11   55    59   34  -90  -65   28   -1 -107   53 
+#  122 -127  -70   14   71 -128   21  -59    87  -51 -120  -56    1  119  -60  -29 
+#   -7  -74  -14  -45 -117   40  123 -117    93  -81  127 -105  -17  -82  -82   98 
+#  -20   93  101  -16   45   15  -43 -114    21   32  -60  121  -87   20   -4 -107 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# 23621 -29760  4920 -15791 -8121  9638 16152  5516 
+# -12568  4480 29651 -15829 16806 -26019  7670 -11737 
+# -14240  4849 -18284 18587 20826  2055 -13306  3214 
+# -4113  4149 -2023 11478 -1928 -8249  5454 -2846 
+# 17174 -20505 -4371  -887 -14988 11294 10861  5774 
+# -15045   957  7419 -7241 -31276 -25681 -11817 16980 
+#  4232 -20293 17647 -16013 16589 -7620 -3883 24489 
+# -5094 17435  7483 -15529 -3507 -1383  2664 -3112 
+# Errors found:         321, dumping test case
+# 
+# A x B
+#  -78   15   92  -30   26   24   -5   70   127 -124   55   -5  -37   10  -90   64 
+#  -16   55   -6  -56   18  -65  -91  -36   -86  -16   97   11  -25   34   91  -90 
+#   25   11   35 -110  114  -12  -14  -29    49   26  112   16   45 -121  -51  -55 
+#  -10  -50  123  -15   57   56  -24 -106   113 -105  -55  -34   55  106    6   10 
+#  -47  124  -36   44   20  -75   74   -3   117   58   80  116   84  111  -58 -126 
+# -115   68    5   20   73   79  -35 -104     9 -119  -99  -55 -126  -44   73   35 
+#  126   74  -40    3   84   23   91  124    69   -6   61  -38   45  111  -46   40 
+#  -32  -10    7   12 -104 -105  -49  -42    12 -115 -101  -27  105 -118   71 -121 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -6325  5606  1448  3043 11286 -21567  8957 -22808 
+# -18574 20293 12823 12586 -2306 -4495  2256 -10031 
+#  3430 20643 24795 19495  1738  -221 -12597 -14250 
+# 11607 15789 17459  9284 -8148 -4566 -15653  3589 
+# -6690  8274 16833  3241 13584 26854  7362 -13570 
+# -12359 18205  6119  8984 -12437 15691 12162 -8804 
+# 25819 -30834  6933  1115 13126 12715 -1123 -17509 
+# -18503 14637   722 -3539   288 -7642  -676 11138 
+# Errors found:         385, dumping test case
+# 
+# A x B
+#   91  -64  -41  -61  125   72   92  126    73   12   48   39  -16  -63 -102  107 
+#   17   33  -71   79    9  -37 -112 -105  -115  -43  -53  102   32  -31   68  -49 
+#  -81  123   85  102  -19   83   38 -113    74  -78  -11  -11   17   71  -78   40 
+#   39   99 -101   65  122  102  -72  106    38  -35   33  -48 -125  -64   24  -57 
+#   61  -61  103   -8  -15  -23    3 -100   124 -112  -73   48  -13   12 -121  -32 
+#  116  -40   88   39   20  123   74 -128    58   90   79   25  -83   34   83  -47 
+#   15  -27  -88  115   75  119   52   96   -91  -16  108 -100  -13 -120  -40   53 
+# -120   23   78  -58   27  118  117  125    70   49  -34  102  -87   12   78  -93 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# 28775  6359  8413 11852 -16335 -8336 -14901   484 
+# -2994 -6133 -9651  1015  3247 -1161    74 -1861 
+# -18802 -13008  7914 -10607 -3378 -2525 11298 -7878 
+# 21474  3676 -12347 -29508 -25636 -2013 17044 -30795 
+#  8319 -9737  7766 -16387 10588  3351 -26610 25112 
+# 14982 -3743 28608 -18817 -6810 -8310 -25635 25074 
+# 20248 10362 13192  4446 28681 -13858 12468 -21312 
+#   458  5366  5986  4888 -11309  7893 17925 -19375 
+# Errors found:         449, dumping test case
+# 
+# A x B
+#   14 -117   -5  -85  -45   57  -88   61   -53 -111  -20   65   82  -92   59    7 
+#   73  -53  -28  -84  124  -44 -113   11   -21   68  -96   15  -71   28  -36   33 
+#  -79   57   19   50   46  -55  122 -127   105   -2   -6 -102  -36  -57   36  -36 
+#  101  -20  -31   53    3 -118  -16  108    60   41   91   -7  -81  -39   46  -55 
+#  -72  127   38  -96  -29  -42  -51   50     2 -126   60 -113   25   40   27   44 
+#  -86   81 -114   75 -110  115 -114   17    72   50   88  -82    5  -15  -67  -80 
+#  -93   -6  110   88   28   74   79    5   125 -104   27 -108   92   61  124   82 
+#   73 -128   41  -53  -71  -99   18 -126   117   55  100   66   61   90  -37  -37 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -3759  8042  9287 14201 11305 -3497 -17255 -14921 
+# -26494 -20562 -2231  9920 10716 -3611 -6780  3693 
+#  4508 -13562 -10942 -28814 -10907  4508 21025 19021 
+# -2862 -9010  5073 27249 11126   482 10008  2512 
+# -4228 22224 -21529  9550 -11090 12617 -18011  3651 
+# -8814 -14778  3595 23162 -26400  2204 31452 -21967 
+# -27807  5534 20609 30131 -9645  3965  8146 -8044 
+# -19818 -23868 -19327  4895  9591 -22167 19563  8660 
+# Errors found:         513, dumping test case
+# 
+# A x B
+#  -33  -27    4  -40   34   73  -34 -103   104  -50   13   41  -23 -126   94   32 
+#   71    7   32 -103  -75   77   28  104    39  100  -99   31  122   84  -32   93 
+# -122   40   94  -98  -26  -37    2  -41   -54   64   96   62   25  -90   -8  -60 
+#   -9  -89  120  -20 -126   38   73  100    32  -23   43  -73 -121   92  -29  116 
+#   73   44 -113   92  -36   41   29   71   -48   -4  124    5   -4  -78  -46   94 
+#   44   60   46  -88  -93   53  -90  -90  -126  -76   99  -24   75  -52   15   30 
+#   14   20   83  -25   44  -83  -59  -90    79   -8   24  -26  -61  -89   33   40 
+#   86  105  -80   52   83  -58   88   93  -122 -111    9  -13  -28   33   80   96 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -6931  6147 10608  1619 12702 -8971 -10941 -14309 
+# -13945 -15753 -1196  8328 13939 -17928 23030 -4581 
+# -8270 25821 -7944 10459 20249  3677 -13231 -24602 
+# -16700 -14378 10144  1032 -9130 -14327 18397 -16269 
+#  8545 -19683 -9369 -12206 -10806 13570 12598 29702 
+#  3272 15822 -13991 14713 30463 -3202  -697 -25372 
+# 11619 23781   108 13081  6936 -6689 -11679 -14926 
+# 17953 -7067 -7222 -3665 -10114  1747  9512 -23677 
+# Errors found:         577, dumping test case
+# 
+# A x B
+#  -99   30   74   -1 -126  -57   27   34    19  110  116 -125   17  -82   42  -54 
+#  -77   88 -100  -37    5  117  -70   47     5  -99  -89  105    6   50   72  -96 
+#   37   37 -114  -36   31  109  106   38   109 -126   26   -1 -102    2  -20  -99 
+#  -76 -116   10   45  -21  -29  -34 -106    43  -58   66  -24 -111  -33   76 -113 
+#  106   12  -71   62  -63   90  125  -75   -76  -26  126  -17   27   57  -86  -21 
+#  -49   12 -111   93  106   73   -4   49  -105  -22 -117  -59  -84 -111   37   -1 
+#   61  -48 -118   89   54   63   70   17    69 -122  -29  116  -86  125  -15  -92 
+#  -82    9    3 -105 -116  -21  -51  119     4   50 -112  -84   11 -104  102 -119 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# 23852 -20190 -26094 21256 -9502  8783  8236 -8574 
+# -30821  5750 27437   797 10370 -14605 12033 10416 
+# -19421  2623 -20518  2384  -542 -1258  7415 -5230 
+#  2872  -714 18343  3258 -4376  7763 -17893 25377 
+#   664 -3520  -219  3154 -18602  -436 10671 -8195 
+# -24772   590 -4057 -5425 -2149 -6330  6737 -5788 
+# -13937 10688  9653 -12626 -6761 -7508  6601 -6721 
+#  2277 11451 24363  1011 14336 -12387 11266  8120 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 13605 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of tpuv1_integration_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1_integration_tb_sv_unit
+# Loading work.tpuv1_integration_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of memB.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+# -12119 -12838 29656 -7055 -8908 -12724 -5602 -5098 
+#  5765 -5299 -15770 11352 -15749 -6937 14834 -24814 
+# -3664  7248 10119  1646 -18944 -6892 -15673 19777 
+# 26820 -9330 14718 -13296 23123 -12989 -1147  2585 
+# -3634 -24367  -343  6130 19226 -8708  2094  4191 
+# -28316  8849  3624 -1390 -1532 -17166 -20921 31922 
+#  -964 -10948  1048 -4900  5583 -5347 13427  -357 
+# -15888 15005 -2632 -6230 -21208 16350 16099 -18726 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Compile of memB_jacob.sv failed with 1 errors.
+# Compile of memB_jacob.sv failed with 1 errors.
+# Compile of memB_jacob.sv was successful.
+# Compile of memB.sv was successful.
+# Compile of memB.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+# -13024 -17776 19448 -6072 -14608 -16984 12144 -14696 
+# -4514 -5429  5795 -1708 -4392 -6466  3050 -3111 
+# -5772 -6942  7410 -2184 -5616 -8268  3900 -3978 
+#   814   979 -1045   308   792  1166  -550   561 
+# -3922 -4717  5035 -1484 -3816 -5618  2650 -2703 
+#  5254  6319 -6745  1988  5112  7526 -3550  3621 
+# -1110 -1335  1425  -420 -1080 -1590   750  -765 
+#  1110  1335 -1425   420  1080  1590  -750   765 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of memB.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+#     0 -9944 11088 -3608 -8272 -7656  7744 -10208 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+#     0     0     0     0     0     0     0     0 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+restart
+# Compile of memB.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 151
+run -all
+# Errors found:          65, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+# -13024 -17776 19448 -6072 -14608 -16984 12144 -14696 
+# -4514 -5429  5795 -1708 -4392 -6466  3050 -3111 
+# -5772 -6942  7410 -2184 -5616 -8268  3900 -3978 
+#   814   979 -1045   308   792  1166  -550   561 
+# -3922 -4717  5035 -1484 -3816 -5618  2650 -2703 
+#  5254  6319 -6745  1988  5112  7526 -3550  3621 
+# -1110 -1335  1425  -420 -1080 -1590   750  -765 
+#  1110  1335 -1425   420  1080  1590  -750   765 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
+# Compile of memB_jacob.sv was successful.
+# Compile of tpuv1.sv failed with 1 errors.
+# Compile of tpuv1.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tpuv1
+# Loading work.memB
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[0] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[1] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[2] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[3] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[4] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[5] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[6] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fifo'.
+#    Time: 0 ps  Iteration: 0  Region: /tpuv1_integration_tb/DUT/MEMB/genblk1[7] File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memB_jacob.sv Line: 23
+# Compile of memB_jacob.sv was successful.
+# Break key hit
+# Load canceled
+restart -f
+# No Design Loaded!
+vsim work.tpuv1_integration_tb
+# vsim work.tpuv1_integration_tb 
+# Start time: 17:22:33 on Sep 29,2021
+# Loading sv_std.std
+# Loading work.tpuv1_integration_tb_sv_unit
+# Loading work.tpuv1_integration_tb
+# Loading work.tpuv1
+# Loading work.memA
+# Loading work.memB
+# Loading work.systolic_array
+# Loading work.fifo_set
+# Loading work.fifo
+# Loading work.tpumac
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[0]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[1]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[2]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[3]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[4]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[5]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[6]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/fifo_set.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tpuv1_integration_tb/DUT/MEMA/genblk1[7]/FIFO File: C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/memA.sv Line: 23
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Errors found:           1, dumping test case
+# 
+# A x B
+#  -25 -100  -24   22    0   -8   17   -4   124   28  -89  -60   89   -5  -94  -91 
+#  -34 -112  -34 -122  -51   79 -105   30  -106   23 -125   20   92  -78   -1  -84 
+#   44  -98  -78   82   49 -103    2  -31   -28 -123 -101  -83   24  -64 -116 -120 
+#   47   20   17   72   29  -11 -126  113    53   15   45  -41  -63 -104 -126  -63 
+#   21  126   57   56  -95   24  -72  -31    83 -113   94  -85  122 -127 -127   -8 
+#  -94   13   56  -63   26  -55  -45  -42    47 -105   67   77  117  -42    1 -119 
+#   42  -32  -91   63  126  125   24  -30   -65   15  -44  -93   89   78  -70  -37 
+#   51   -4  -67 -119 -127  -83 -108  125    19  113 -126   41   94   87  -88  116 
+# Dumping result
+#  4681   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Dumping expected
+#  7781   925 17359 -1771 -13186  8487  1616 12028 
+#  9017 -1893 16309 29037 -9964 21349 -31646 22640 
+# 20881 11607 21425 -15041 -20947  -550 -9060 16617 
+# 19275  9522 -11865  6256  3554 -13589 -20300  6314 
+# -12046   947 -21104  9581 -6803 -16661  4089 -25891 
+# -16241 -12750  4281  -147 -13073 -5732 13754  7841 
+# 28690 -17815 -30305 -2737 23954 -20432 -16215 -14434 
+# -2730 -22173 -31124 26873 -13007 -26749 30582 -24915 
+# Errors found:           2, dumping test case
+# 
+# A x B
+#  -88  -81   77   30   -2   37   73    0    74   89  -95   28   72  106  -50   51 
+#  -61   94   27   65  -19  121  -60  -84    -2  -69 -118   59    8   33  126 -109 
+#  -78 -113    3  -75   -4  -80    1  -86  -120    6  -42   69  -23   -1  -67   32 
+#   11  -46 -123   -8  -60  120   61   89   -39   45   79  -84    0  116   56 -128 
+#  -53   85   53  -81   30   13  124   99     5  -32   -3   44   68   75  -78  -27 
+#   71 -128   62 -118 -111 -107 -111   85   114  -35  -38   35   32  -94  -19  -17 
+#  -15   56  -95  -68  -31  -70   -3   57    95  -16   40   -4   95   96  -46   38 
+#   15   26  -32  100 -104 -101 -127  -69   -97  -81   89  -79  115  -72   28   -4 
+# Dumping result
+# -12129 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# Dumping expected
+# -5617 -2830 18574 -3535  -772 -5218 -13190  5164 
+#  5670 -4691 -15713 10516 -17041 -8362 16316 -24301 
+# -3684  7376 10131  1470 -19216 -7192 -15361 19885 
+# 26520 -7410 14898 -15936 19043 -17489  3533  4205 
+# -3484 -25327  -433  7450 21266 -6458  -246  3381 
+# -28871 12401  3957 -6274 -9080 -25491 -12263 -30617 
+# -1119 -9956  1141 -6264  3475 -7672 15845   480 
+# -16408 18333 -2320 -10806 -28280  8550 24211 -15918 
+# ARRRR!  Ye codes be blast! Aye, there be errors. Get debugging!
+# ** Note: $stop    : C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv(230)
+#    Time: 2805 ps  Iteration: 1  Instance: /tpuv1_integration_tb
+# Break in Module tpuv1_integration_tb at C:/Users/cj/Desktop/CS564/ece554_miniproject/hw/tpuv1_integration_tb.sv line 230
