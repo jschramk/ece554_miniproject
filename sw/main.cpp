@@ -1,3 +1,4 @@
+/*
 // Copyright (c) 2020 University of Florida
 //
 // This program is free software: you can redistribute it and/or modify
@@ -117,10 +118,10 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
 }
 
+*/
 
 
 
-/*
 
 // Copyright (c) 2020 University of Florida
 //
@@ -423,4 +424,3 @@ int main(int argc, char *argv[])
   return EXIT_FAILURE;
 }
 
-*/

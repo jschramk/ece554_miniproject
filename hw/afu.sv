@@ -176,7 +176,7 @@ module afu
 		    // =============================================================   
 		    
                     // Provide the 64-bit data from the user register mapped to h0020.
-                    16'h03xx: tx.c2.data <= user_reg;
+                    //16'h03xx: tx.c2.data <= user_reg;
 
 		    // If the processor requests an address that is unused, return 0.
                     default:  tx.c2.data <= 64'h0;
