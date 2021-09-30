@@ -229,8 +229,9 @@ int main(int argc, char *argv[]) {
 	// Calculate
 	fprintf(stdout, "Performing Calculation...\n");
 	afu.write(0x0400, 100);
+
 	// Do we have to sleep?
-//	usleep(1000*1000);
+	usleep(1000*1000);
 
 	// Read Values.
 	fprintf(stdout, "Reading Output from C...\n");
