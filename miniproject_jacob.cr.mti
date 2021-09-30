@@ -108,13 +108,6 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	systolic_array
 
-} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module memB
-
-Top level modules:
-	memB
-
 } {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling module tpumac
