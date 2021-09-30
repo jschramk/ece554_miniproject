@@ -60,11 +60,11 @@ int main(int argc, char *argv[])
     for (uint16_t i = 0x300; i <= 0x37f; i += 0x8)
     {
 
-      afu.write(i, i);
+      uint64_t exp = i;
+
+      afu.write(i, exp);
 
       uint64_t result = afu.read(i);
-
-      uint64_t exp = i;
 
       if(result != exp) {
 
@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
       }
 
       errors++;
+      
     }
 
     if (errors == 0)
