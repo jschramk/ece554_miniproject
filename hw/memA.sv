@@ -26,7 +26,7 @@ generate
 			.en(en),
 			.WrEn(WrEn && (Arow == row)),
 			.in_array(Ain),
-			.d(0), // since this is written to using WrEn, always shift in zeroes
+			.d({BITS_AB{1'b0}}), // since this is written to using WrEn, always shift in zeroes
 			.q(Aout[row])
 		);
 
