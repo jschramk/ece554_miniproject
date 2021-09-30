@@ -1,0 +1,292 @@
+commit ce1a53bbce078fb6bbadbf1f8ffbd5dd777d691e
+Merge: 987f130 540fb18
+Author: u90081 <u90081@s005-n003.aidevcloud>
+Date:   Wed Sep 29 19:53:11 2021 -0700
+
+    Merge branch 'main' of http://github.com/jschramk/ece554_miniproject into main
+
+commit 987f1303f02bfb84fc699389eddc5094a7c9660b
+Author: u90081 <u90081@s005-n003.aidevcloud>
+Date:   Wed Sep 29 19:51:03 2021 -0700
+
+    added fit summary
+
+commit 540fb18e50ea5ca131d4b4a24c1a8b97d8e0b9ab
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Wed Sep 29 21:35:24 2021 -0500
+
+    added tb log
+
+commit 954e0c96d84fd6d0f0183f65cef5b7b032ac127c
+Author: Thomas <antonacci@wisc.edu>
+Date:   Wed Sep 29 21:29:19 2021 -0500
+
+    filelist updated
+
+commit fa4343b2e478f0c1b3f0f670f6c93a54a26a0791
+Author: Thomas <antonacci@wisc.edu>
+Date:   Wed Sep 29 21:24:31 2021 -0500
+
+    replace memb
+
+commit c0f3fd380963f1ef5e0fb0681d8180900b493205
+Merge: eb4a5b0 ecb2f14
+Author: Thomas <antonacci@wisc.edu>
+Date:   Wed Sep 29 21:14:22 2021 -0500
+
+    Merge branch 'main' of github.com:jschramk/ece554_miniproject
+
+commit ecb2f14cb04758a88b67ec25edc81f4cfdbc2109
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Wed Sep 29 21:12:41 2021 -0500
+
+    jacob turn in
+
+commit eb4a5b0d5b0310eda23a9c3e869513f4a76dbd8a
+Author: Thomas <antonacci@wisc.edu>
+Date:   Wed Sep 29 21:11:06 2021 -0500
+
+    All tests passed, baybeee
+
+commit 682f9ec5a939ec2b2c8f6db07671b1166055cdbe
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Wed Sep 29 20:19:23 2021 -0500
+
+    fixed memB_jacob syntax errors
+
+commit 58854ed6b8f0bbfb76ba47b89ea26d684de1a1ae
+Author: CJDAmico <47787235+CJDAmico@users.noreply.github.com>
+Date:   Wed Sep 29 20:12:46 2021 -0500
+
+    my special sauce
+
+commit 973966cedd2efad972c9141942344d126836a6b2
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Wed Sep 29 17:11:43 2021 -0500
+
+    fixed constant 0 input to d in memA
+    
+    - modelsim did not like the unspecified width constant 0 input to d in memA, changed to {BITS_AB{1'b0}}
+
+commit 605566b5d5611e7f3f9afc683ff8c7a140b5cd75
+Author: ctothejdamico <cj@damicos.net>
+Date:   Tue Sep 28 19:09:46 2021 -0500
+
+    not working
+    
+    im sad
+
+commit 856af81c47c374c23a469a9c9da27c0c688afe22
+Author: ctothejdamico <cj@damicos.net>
+Date:   Tue Sep 28 17:32:33 2021 -0500
+
+    First attempt at tpuv1 implementation
+    
+    untested implementation of tpuv1
+
+commit 4937c372d45ddd2ee0408a4f5ca6e515a3abfadb
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 28 15:49:13 2021 -0500
+
+    added shell write logic
+
+commit 5ce2382878467e580b1aa33ef7ffb2f169a0986f
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 28 15:37:38 2021 -0500
+
+    added params and basic connections
+
+commit 2a0e092bf5e5d1591e0f6461aff0beb5ae3e2988
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 28 15:34:25 2021 -0500
+
+    added empty module instances
+
+commit 35c70497606b1d1b33bc564aa39c2182a42aa0bd
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 28 15:20:14 2021 -0500
+
+    minilab 5 setup
+
+commit 18c9ef449a03f50a4cf21c45dacc007ed998310e
+Author: Thomas <antonacci@wisc.edu>
+Date:   Sun Sep 26 15:42:53 2021 -0500
+
+    All tests passing
+
+commit 406439f32c021a4108342115047cfd32dec022af
+Author: ctothejdamico <cj@damicos.net>
+Date:   Fri Sep 24 12:20:22 2021 -0500
+
+    Testbench for B complete
+    
+    Testbench for B is complete.
+    Also had to make the counter in memB bigger.
+
+commit 9a77be5b6296af1326b54a63f78c82aefcf5b7ca
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 23 20:37:43 2021 -0500
+
+    added first try of memA, fixed memB
+    
+    - cleaned up memB and fixed syntax errors
+    - wrote memA and supporting module fifo_set
+    - memA and memB compile fine, test bench does not
+
+commit 9115f0d528cbea5e2ba20a37a18a4359cb703692
+Author: Thomas <antonacci@wisc.edu>
+Date:   Thu Sep 23 18:20:34 2021 -0500
+
+    Finished memB, started tb
+
+commit 39c9bfc5e9445dc76acafcc4e8f5d21e9cb882d4
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Wed Sep 22 13:11:05 2021 -0500
+
+    Finished minilab 3
+
+commit ed80993fc335f77eab3f8f3049a888794f4586de
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:51:39 2021 -0500
+
+    please work
+
+commit d4da5483e1a4294221a828754a72a03cf8d08573
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:48:28 2021 -0500
+
+    update
+
+commit bbdf62087fbc4935e096f342b1d3ac7b34494e78
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:40:58 2021 -0500
+
+    Update main.cpp
+
+commit 0f7e25e7d7675df13a4bee7291c9cdf5c3d08b3c
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:39:59 2021 -0500
+
+    Update main.cpp
+
+commit b245e9e1f08873ed4777bf0290657b335fdde06c
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:37:41 2021 -0500
+
+    Update main.cpp
+
+commit 867885b079a4adfc3cab4f28312abfac97828296
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:36:34 2021 -0500
+
+    Update main.cpp
+
+commit 9ecffbc12b71b68ef290f6f356af3712e775bc05
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:34:53 2021 -0500
+
+    Update main.cpp
+
+commit 28c4953ce5396a5c3e6cf4d86909c80128eafe56
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:33:22 2021 -0500
+
+    Update main.cpp
+
+commit 7200438e144e5d40ab44bc33c6a552bb642c6e39
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:31:27 2021 -0500
+
+    fixed main
+
+commit ec653793090504abc66b6407bff93d25028d381c
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 19:12:09 2021 -0500
+
+    fix afu again
+
+commit a10b15776d2989a35832b0d52630d026808c4ea4
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 18:48:45 2021 -0500
+
+    fixed afu
+
+commit 3af366522b625cd8cceb70f79cf137aadbd5e879
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 18:44:06 2021 -0500
+
+    fixes
+
+commit 1047a1155aff72b378733a7d3cd8db0102c47b1d
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 18:33:07 2021 -0500
+
+    Update main.cpp
+
+commit 435a22507dd33e27d2b63d9b072816a67bfdc672
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 18:08:41 2021 -0500
+
+    fix fifo
+
+commit 07d3f0f8c7a8ad5b8aa8cc9a0e75aed83fe4b706
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 12:05:12 2021 -0500
+
+    change i++ to i=i+1
+
+commit 3c750d1e3d2ac674ef9bbbb6a8cdf9dbc6151928
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 11:59:50 2021 -0500
+
+    change loop
+
+commit 28fe1683bac2f08c8f995f983dd34cb7ef7bbba6
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 11:34:13 2021 -0500
+
+    change regs def
+
+commit 33478760f2b3dea060d05b06d20b3d62247aeb90
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 11:21:14 2021 -0500
+
+    changed shift reg definition
+
+commit 4acf2c3995641e0099d2d15ce5e1a2f2c5d04ca4
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Tue Sep 14 11:03:10 2021 -0500
+
+    build project
+
+commit d18dc59e2f2762bd7b82f37bd5effae1375d5216
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 9 18:29:39 2021 -0500
+
+    file restructure
+
+commit 744c4c742f428f3521657041b60b83a1f6b17a88
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 9 18:10:17 2021 -0500
+
+    changed c test file
+    
+    - fifo passes fifo_tb
+
+commit d3458cf651169bd5be5a1c84ce19d828dd642175
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 9 17:06:11 2021 -0500
+
+    fixed file structure
+
+commit 21361bc9053265ae50f6a4b3329de8d06539a013
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 9 17:02:48 2021 -0500
+
+    initial file dump
+
+commit 695e36614b6ef74902ac3f952a8e0a4c2b211294
+Author: Jacob Schramkowski <54072198+jschramk@users.noreply.github.com>
+Date:   Thu Sep 9 17:01:34 2021 -0500
+
+    Initial commit
