@@ -68,12 +68,12 @@ int main(int argc, char *argv[])
 
       if(result != exp) {
 
-        fprintf(cerr, "ERROR (address: %h): got: %h, expected %h", i, result, exp);
+        printf(stderr, "ERROR (address: %h): got: %h, expected %h", i, result, exp);
 
       }
 
       errors++;
-      
+
     }
 
     if (errors == 0)
