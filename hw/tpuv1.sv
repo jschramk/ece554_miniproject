@@ -38,7 +38,7 @@ generate
 endgenerate
 
 assign AWrEn = (count == 0 || count > 3*DIM-2) ? (r_w ? (addr >= 16'h100 && addr <= 16'h13f) : 1'b0) : 1'b0;
-assign Arow = addr[7:0] / 8;
+assign Arow = addr[7:3];
 assign Ben = ((count == 0 || count > 3*DIM-2) ? (r_w ? (addr >= 16'h200 && addr <= 16'h23f) : 1'b0) : 1'b0) || (count > 0);
 assign Crow = addr[6:4];
 assign high = addr[3];
