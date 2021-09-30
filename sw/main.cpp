@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     // Test 100 different writes and reads to the user MMIO register.
     unsigned errors = 0;
 
-    for (uint64_t i = 0x300; i <= 0x37f; i += 0x8)
+    for (uint64_t i = 0x300; i <= 0x37f; i += 0x10)
     {
 
       uint64_t exp = i;
