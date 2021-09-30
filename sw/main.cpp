@@ -387,7 +387,11 @@ int main(int argc, char *argv[])
         fprintf(stdout, "row: %d, col: %d | got: %hx, expected %hx", r, c, output[r][c], output_reference[r][c]);
         fflush(stdout);
         //assert(output[r][c] == output_reference[r][c]);
-        fprintf(stdout, " [OK]\n");
+        if(output[r][c] == output_reference[r][c]){
+          fprintf(stdout, " [OK]\n");
+        } else {
+          fprintf(stdout, " [ERROR]\n");
+        }
       }
     }
 
