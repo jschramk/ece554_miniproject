@@ -11,7 +11,7 @@ cModel Technology
 dC:/ECE352/Software/ModelSim
 Xafu_tc_svh_unit
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1632959336
+Z1 !s110 1632962538
 !i10b 1
 !s100 i]hL3]NCH]C_HSfi^e9PJ2
 IdkmSf7DeU;9_SJUjf3DiZ2
@@ -27,7 +27,7 @@ Z3 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z4 !s108 1632959336.000000
+Z4 !s108 1632962538.000000
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/afu_tc.svh|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/afu_tc.svh|
 !i113 1
@@ -80,7 +80,7 @@ r1
 R5
 vfifo_set
 R0
-Z8 !s110 1632959337
+R1
 !i10b 1
 !s100 hgkg1hPK71CW=jaNDNlj53
 INJeLVVa=EiL2aTZd:?Cd41
@@ -88,7 +88,7 @@ R6
 !s105 fifo_set_sv_unit
 S1
 R2
-Z9 w1632860101
+Z8 w1632860101
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_set.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_set.sv
 L0 9
@@ -103,7 +103,7 @@ R4
 R5
 vfifo_tb
 R0
-R8
+R1
 !i10b 1
 !s100 nzCf_hD^2:Jh7PSXQ2C=:0
 Ilc5M8FlVB:B6YCh=><2V=1
@@ -119,7 +119,7 @@ R3
 r1
 !s85 0
 31
-Z10 !s108 1632959337.000000
+R4
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo_tb.sv|
 !i113 1
@@ -137,14 +137,14 @@ I6;WiKOe_akMn3nGS_i8cC3
 !s105 mem_tb_sv_unit
 S1
 R2
-R9
-Z11 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
-Z12 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
+R8
+Z9 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
+Z10 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv
 L0 5
 R3
-R10
-Z13 !s107 C:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv|
-Z14 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv|
+Z11 !s108 1632962539.000000
+Z12 !s107 C:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv|
+Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/mem_tb.sv|
 !i113 1
 R5
 Xmem_tb_sv_unit
@@ -159,20 +159,20 @@ IBjk;7:XV=SUZD<VR;aEK43
 !i103 1
 S1
 R2
+R8
 R9
-R11
-R12
-Z15 FC:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh
+R10
+Z14 FC:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh
 L0 3
 R3
-R10
+R11
+R12
 R13
-R14
 !i113 1
 R5
 vmemA
 R0
-R8
+Z15 !s110 1632962539
 !i10b 1
 !s100 H5PT;@PS?98VX2RXF0ITG1
 IT0T3^KibCbb_2N:54;bi10
@@ -180,7 +180,7 @@ R6
 !s105 memA_sv_unit
 S1
 R2
-w1632959332
+Z16 w1632961277
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv
 L0 3
@@ -188,7 +188,7 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv|
 !i113 1
@@ -196,7 +196,7 @@ R5
 nmem@a
 vmemB
 R0
-R8
+R15
 !i10b 1
 !s100 6W<GUZA3_G`bZ13bzfKdF3
 I7Lo^VETGF0Ud:9D[OWbmL1
@@ -212,7 +212,7 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv|
 !i113 1
@@ -220,7 +220,7 @@ R5
 nmem@b
 vsystolic_array
 R0
-R8
+R15
 !i10b 1
 !s100 i]Z_zhKQ3kB5V8oaX@k7n3
 I?IO6n5[FNDR]ez?GAN;aM2
@@ -236,7 +236,7 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv|
 !i113 1
@@ -255,13 +255,13 @@ I1kodbmmRM9;LF0Xk6l=?[0
 S1
 R2
 R7
-Z16 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
-Z17 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
+Z17 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
+Z18 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv
 L0 5
 R3
-R10
-Z18 !s107 C:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv|
-Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv|
+R11
+Z19 !s107 C:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\systolic_array_tc.svh|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv|
+Z20 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tb.sv|
 !i113 1
 R5
 Xsystolic_array_tb_sv_unit
@@ -277,19 +277,19 @@ I?3^a;bCD[]=dOVAXhH_zJ1
 S1
 R2
 R7
-R16
 R17
-R15
+R18
+R14
 L0 3
 R3
-R10
-R18
+R11
 R19
+R20
 !i113 1
 R5
 Xsystolic_array_tc_svh_unit
 R0
-R8
+R15
 !i10b 1
 !s100 azE3XfS`@ALH_ob;ajET81
 IO0^BG_Njf3_nY7>Kk::c`1
@@ -305,14 +305,14 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tc.svh|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array_tc.svh|
 !i113 1
 R5
 vtpumac
 R0
-R8
+R15
 !i10b 1
 !s100 aIT_8;ZV^_W]=D=E4D_LD3
 Ij90RnG>>LEKFH>Nl149W]0
@@ -328,14 +328,14 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv|
 !i113 1
 R5
 vtpumac_tb
 R0
-R8
+R15
 !i10b 1
 !s100 CnA77[aVIzC;HBD=XchYn0
 I0[TLiG894^UM6R^1NM;0X2
@@ -351,22 +351,22 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac_tb.sv|
 !i113 1
 R5
 vtpuv1
 R0
-R8
+R15
 !i10b 1
-!s100 MAAJ8B4nlP1RHSo<]2TPU1
-I7c:bQ@J6e`SG_?2J6IN5l1
+!s100 kAeCjVPbCclV93Te7:@Nf3
+ID0h33?:XW:@9A41<6X0T>3
 R6
 !s105 tpuv1_sv_unit
 S1
 R2
-Z20 w1632959165
+w1632962532
 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv
 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv
 L0 1
@@ -374,7 +374,7 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv|
 !i113 1
@@ -392,7 +392,7 @@ Ih__0<`G<_G9R8m8o47[Cb2
 !s105 tpuv1_integration_tb_sv_unit
 S1
 R2
-R20
+R16
 Z21 8C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv
 Z22 FC:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1_integration_tb.sv
 L0 9
@@ -414,7 +414,7 @@ I_e<g1a2K`7fNe<YA^[ePN2
 !i103 1
 S1
 R2
-R20
+R16
 R21
 R22
 FC:\Users\jschr\Documents\GitHub\ece554_miniproject\hw\afu_tc.svh
