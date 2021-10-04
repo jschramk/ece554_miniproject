@@ -25,11 +25,11 @@ logic signed [BITS_AB-1:0] B_conn [DIM:0] [DIM-1:0];
 
 logic signed [BITS_C-1:0] C_conn [DIM-1:0] [DIM-1:0];
 
-genvar row, col;
-
 assign A_conn[0] = A;
 assign B_conn[0] = B;
 assign Cout = C_conn[Crow];
+
+genvar row, col;
 
 generate;
     

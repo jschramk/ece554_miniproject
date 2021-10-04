@@ -13,7 +13,7 @@ module tpuv1 #(
 
 logic computing;
 
-logic Aen, Ben, AWrEn, SAWrEn, high, BWrEn;
+logic Aen, Ben, AWrEn, SysArrWrEn, high, BWrEn;
 logic [$clog2(DIM)-1:0] Arow;
 logic [$clog2(DIM)-1:0] Crow;
 logic [$clog2(3*DIM-2):0] count;
@@ -55,7 +55,7 @@ assign Crow = addr[6:4];
 assign high = addr[3];
 /*
 assign Ben = ((count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h200 && addr <= 16'h23f)) || (count > 0) || addr >= 16'h400;
-assign SAWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h300 && addr <= 16'h37f);
+assign SysArrWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h300 && addr <= 16'h37f);
 assign Cin = high ? {Creg, CDataOut[3:0]} : {CDataOut[7:4], Creg};
 assign dataOut = high ? COutRaw[127: 64] : COutRaw[63:0];
 assign Aen = (count > 0) || addr >= 16'h400;
@@ -93,7 +93,7 @@ systolic_array #(
 ) SYS_ARR (
 	.clk(clk),
 	.rst_n(rst_n),
-	.WrEn(SAWrEn),
+	.WrEn(SysArrWrEn),
 	.en(computing),
 	.A(memAOut),
 	.B(memBOut),
@@ -119,7 +119,7 @@ always @(posedge clk or negedge rst_n) begin
 		Ben <= 0;
 		AWrEn <= 0;
 		BWrEn <= 0;
-		SAWrEn <= 0;
+		SysArrWrEn <= 0;
 		dataOut <= 0;
 
 		if (!computing) begin
@@ -140,7 +140,7 @@ always @(posedge clk or negedge rst_n) begin
 				end else if (addr >= 16'h300 && addr <= 16'h37f) begin
 					
 					// write into C
-					SAWrEn <= 1;
+					SysArrWrEn <= 1;
 					
 					Cin <= high ? {Creg, CDataOut[3:0]} : {CDataOut[7:4], Creg};
 
