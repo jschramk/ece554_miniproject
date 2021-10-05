@@ -69,7 +69,7 @@ module afu
    fifo FIFO(
     .clk(clk),
     .rst_n(!rst),
-    .en(rx.c0.mmioWrValid/* || rx.c0.mmioRdValid*/),
+    .en(rx.c0.mmioWrValid/* | rx.c0.mmioRdValid*/),
 	  .d(fifo_in),
     .q(fifo_out)  
   );

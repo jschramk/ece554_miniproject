@@ -42,7 +42,7 @@ class systolic_array_tc #(parameter BITS_AB=8,
       int row_start = Row;
       int row_stop = Row + DIM - 1;
       bit signed [BITS_AB-1:0] retval = {BITS_AB{1'b0}};
-      if ((cycle >= row_start) && (cycle <= row_stop)) begin
+      if ((cycle >= row_start) & (cycle <= row_stop)) begin
          retval =  A[Row][cycle-row_start];
       end
 
@@ -56,7 +56,7 @@ class systolic_array_tc #(parameter BITS_AB=8,
       int col_start = Col;
       int col_stop = Col + DIM - 1;
       bit signed [BITS_AB-1:0] retval =  {BITS_AB{1'b0}};
-      if ((cycle >= col_start) && (cycle <= col_stop)) begin
+      if ((cycle >= col_start) & (cycle <= col_stop)) begin
          retval =  B[cycle-col_start][Col];
       end
 

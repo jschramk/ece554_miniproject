@@ -45,7 +45,7 @@ initial begin
     @(negedge clk) rst_n = 0;
     @(negedge clk) rst_n = 1;
 
-    if (Aout !== 0 || Bout !== 0 || Cout != 0) begin
+    if (Aout !== 0 | Bout !== 0 | Cout != 0) begin
         errors++;
         $display("Error! Reset was not conducted properly. Expected: Aout = 0, Bout = 0, Cout = 0, \
         Got: Aout = %d, Bout = %d, Cout = %d",Aout, Bout, Cout ); 
@@ -123,13 +123,13 @@ initial begin
         @(negedge clk)
 
         // check that Aout matches the expected result
-        if(en && Aout !== Ain) begin
+        if(en & Aout !== Ain) begin
             $display("ERROR: Expected Aout: %h, got %h", Ain, Aout);
             errors++;
         end
 
         // check that Bout matches the expected result
-        if(en && Bout !== Bin) begin
+        if(en & Bout !== Bin) begin
             $display("ERROR: Expected Bout: %h, got %h", Bin, Bout);
             errors++;
         end

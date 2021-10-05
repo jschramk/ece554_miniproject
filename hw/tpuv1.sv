@@ -40,16 +40,16 @@ generate
 
 endgenerate
 
-assign AWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h100 && addr <= 16'h13f);
+assign AWrEn = (count == 0 | count > 3*DIM-2) & r_w & (addr >= 16'h100 & addr <= 16'h13f);
 assign Arow = addr[5:3];
-assign Ben = ((count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h200 && addr <= 16'h23f)) || (count > 0) || addr >= 16'h400;
+assign Ben = ((count == 0 | count > 3*DIM-2) & r_w & (addr >= 16'h200 & addr <= 16'h23f)) | (count > 0) | addr >= 16'h400;
 assign Crow = addr[6:4];
 assign high = addr[3];
-assign SAWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h300 && addr <= 16'h37f);
+assign SAWrEn = (count == 0 | count > 3*DIM-2) & r_w & (addr >= 16'h300 & addr <= 16'h37f);
 assign CDataIn = high ? {CHalf, CDataOut[3:0]} : {CDataOut[7:4], CHalf};
 assign dataOut = high ? COutRaw[127: 64] : COutRaw[63:0];
-assign Aen = (count > 0) || addr >= 16'h400;
-assign SAen = (count > 0 && count <= 3*DIM-2) || (r_w && addr == 16'h0400) || (!r_w && addr >= 16'h300 && addr <= 16'h37f);
+assign Aen = (count > 0) | (addr >= 16'h400);
+assign SAen = (count > 0 & count <= 3*DIM-2) | (r_w & addr == 16'h0400) | (!r_w & addr >= 16'h300 & addr <= 16'h37f);
 
 memA #(
     .BITS_AB(BITS_AB),
@@ -96,7 +96,7 @@ always @(posedge clk or negedge rst_n) begin
 		count <= 0;
 	end else if (count > 3*DIM-2) begin
 		count <= 0;
-	end else if (addr == 16'h0400 || count > 0) begin
+	end else if (addr == 16'h0400 | count > 0) begin
 		count++;
 	end
 end
@@ -115,23 +115,23 @@ always @(posedge clk or negedge rst_n) begin
 	SAWrEn <= 0;
 	high <= 0;
 
-	if (count == 0 || count > 3*DIM-2) begin
+	if (count == 0 | count > 3*DIM-2) begin
 		if(r_w) begin // on write, load data based on addr
 			
-			if(addr >= 16'h100 && addr <= 16'h13f) begin
+			if(addr >= 16'h100 & addr <= 16'h13f) begin
 				
 				// write into A
 				Arow <= addr[7:0] / 8;
 				AWrEn <= 1;
 				count <= 0;
 
-			end else if (addr >= 16'h200 && addr <= 16'h23f) begin
+			end else if (addr >= 16'h200 & addr <= 16'h23f) begin
 				
 				// write into B
 				Ben <= 1;
 				count <= 0;
 
-			end else if (addr >= 16'h300 && addr <= 16'h37f) begin
+			end else if (addr >= 16'h300 & addr <= 16'h37f) begin
 				
 				// write into C
 				Crow <= addr[6:4];
@@ -150,7 +150,7 @@ always @(posedge clk or negedge rst_n) begin
 			end
 
 		end else begin
-			if (addr >= 16'h300 && addr <= 16'h37f) begin
+			if (addr >= 16'h300 & addr <= 16'h37f) begin
 				
 				// read from C
 				Crow <= addr[6:4];
