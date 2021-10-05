@@ -40,16 +40,16 @@ generate
 
 endgenerate
 
-assign AWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h100 && addr <= 16'h13f);
+assign AWrEn = (count == 0 || count > 3*DIM-2) && r_w && ((addr >= 16'h100) && (addr <= 16'h13f));
 assign Arow = addr[5:3];
-assign Ben = ((count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h200 && addr <= 16'h23f)) || (count > 0) || addr >= 16'h400;
+assign Ben = ((count == 0 || count > 3*DIM-2) && r_w && ((addr >= 16'h200) && (addr <= 16'h23f))) || (count > 0) || (addr >= 16'h400);
 assign Crow = addr[6:4];
 assign high = addr[3];
 assign SAWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h300 && addr <= 16'h37f);
 assign CDataIn = high ? {CHalf, CDataOut[3:0]} : {CDataOut[7:4], CHalf};
 assign dataOut = high ? COutRaw[127: 64] : COutRaw[63:0];
-assign Aen = (count > 0) || addr >= 16'h400;
-assign SAen = (count > 0 && count <= 3*DIM-2) || (r_w && addr == 16'h0400) || (!r_w && addr >= 16'h300 && addr <= 16'h37f);
+assign Aen = (count > 0) || (addr >= 16'h400);
+assign SAen = ((count > 0) && (count <= 3*DIM-2)) || (r_w && (addr == 16'h0400)) || (!r_w && (addr >= 16'h300) && (addr <= 16'h37f));
 
 memA #(
     .BITS_AB(BITS_AB),
@@ -97,7 +97,7 @@ always @(posedge clk or negedge rst_n) begin
 	end else if (count > 3*DIM-2) begin
 		count <= 0;
 	end else if (addr == 16'h0400 || count > 0) begin
-		count++;
+		count <= count + 1;
 	end
 end
 

@@ -25,7 +25,7 @@ generate
 			.clk(clk),
 			.rst_n(rst_n),
 			.en(en),
-			.WrEn(WrEn && (Arow == row)),
+			.WrEn(WrEn & (Arow == row)),
 			.in_array(Ain),
 			.d({BITS_AB{1'b0}}), // since this is written to using WrEn, always shift in zeroes
 			.q(Aout[row])
