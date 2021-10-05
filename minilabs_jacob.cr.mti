@@ -11,6 +11,13 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	memB
 
+} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpuv1.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module tpuv1
+
+Top level modules:
+	tpuv1
+
 } {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memA.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling module memA
@@ -40,13 +47,6 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 
 Top level modules:
 	--none--
-
-} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/fifo.sv
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module fifo
-
-Top level modules:
-	fifo
 
 } {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/ccip_interface_reg.sv {0 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/ccip_interface_reg.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
@@ -102,12 +102,12 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	tpuv1_integration_tb
 
-} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/systolic_array.sv
+} {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/memB.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module systolic_array
+-- Compiling module memB
 
 Top level modules:
-	systolic_array
+	memB
 
 } {} {}} C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/Documents/GitHub/ece554_miniproject/hw/tpumac.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015

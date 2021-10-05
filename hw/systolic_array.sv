@@ -17,23 +17,24 @@ module systolic_array
 
 // grid conector from each A column to the next flowing left to right
 // 9 rows, 8 cols, sampled inversely to swap orientation
-logic signed [BITS_AB-1:0] A_conn [DIM:0] [DIM-1:0];
+wire signed [BITS_AB-1:0] A_conn [DIM:0] [DIM-1:0];
 
 // grid connector from each B row to the next flowing top to bottom
 // 9 rows, 8 cols, sampled normally
-logic signed [BITS_AB-1:0] B_conn [DIM:0] [DIM-1:0];
+wire signed [BITS_AB-1:0] B_conn [DIM:0] [DIM-1:0];
 
-logic signed [BITS_C-1:0] C_conn [DIM-1:0] [DIM-1:0];
-
-genvar row, col;
+wire signed [BITS_C-1:0] C_conn [DIM-1:0] [DIM-1:0];
 
 assign A_conn[0] = A;
 assign B_conn[0] = B;
 assign Cout = C_conn[Crow];
 
+genvar row, col;
+
 generate;
     
     for(row = 0; row < DIM; row++) begin
+
         for(col = 0; col < DIM; col++) begin
 
             tpumac #(
@@ -53,6 +54,7 @@ generate;
             );
 
         end
+
     end
 
 endgenerate
