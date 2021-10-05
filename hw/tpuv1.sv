@@ -37,11 +37,11 @@ generate
 	for (i = 0; i < DIM/2; i++) begin
 		assign CHalf[i] = dataIn[16*i + 15: 16*i];
 	end
-	
+
 endgenerate
 
 assign AWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h100 && addr <= 16'h13f);
-assign Arow = addr[7:3];
+assign Arow = addr[5:3];
 assign Ben = ((count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h200 && addr <= 16'h23f)) || (count > 0) || addr >= 16'h400;
 assign Crow = addr[6:4];
 assign high = addr[3];
