@@ -27,14 +27,17 @@ logic signed [DATAW*2-1:0] COutRaw;
 
 genvar i;
 generate
+
 	for (i = 0; i < DIM; i++)  begin
 		assign ABDataIn[i] = dataIn[8*i+7:i*8];
 		assign COutRaw[16*i + 15: 16*i] = CDataOut[i];
 		assign Bin[i] = (count > 0) ? {DIM{1'b0}} : ABDataIn[i];
 	end
+
 	for (i = 0; i < DIM/2; i++) begin
 		assign CHalf[i] = dataIn[16*i + 15: 16*i];
 	end
+	
 endgenerate
 
 assign AWrEn = (count == 0 || count > 3*DIM-2) && r_w && (addr >= 16'h100 && addr <= 16'h13f);

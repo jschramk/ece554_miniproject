@@ -27,7 +27,7 @@ always @(posedge clk or negedge rst_n) begin
 
     if(~rst_n) begin 
         
-        for(i = 0; i < DEPTH; i++) regs[i] = 0;
+        for(i = 0; i < DEPTH; i++) regs[i] <= 0;
 
     end else if(WrEn) begin // new WrEn condition 
     

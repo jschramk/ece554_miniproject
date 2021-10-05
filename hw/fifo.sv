@@ -20,18 +20,20 @@ int i;
 // shift on clock when enabled
 always @(posedge clk or negedge rst_n) begin
 
-    if(~rst_n)
+    if(~rst_n) begin
 
-    for(i = 0; i < DEPTH; i=i+1) regs[i] = 0;
+        for(i = 0; i < DEPTH; i=i+1) regs[i] <= 0;
 
-    else if(en)
+    end else if(en) begin
+        
+        regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
 
-    regs[DEPTH-1:0] <= {regs[DEPTH-2:0], d};
+    end
+
 
 end
 
 // output last entry
 assign q = regs[DEPTH-1];
-
 
 endmodule // fifo

@@ -4,8 +4,8 @@
 module tpumac
 #(
     parameter BITS_AB=8,
-    parameter BITS_C=16)
-(
+    parameter BITS_C=16
+) (
     input clk, rst_n, WrEn, en,
     input signed [BITS_AB-1:0] Ain,
     input signed [BITS_AB-1:0] Bin,
