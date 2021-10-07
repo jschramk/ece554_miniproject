@@ -1,0 +1,469 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Xafu_tc_svh_unit
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1633557780
+VES>_bERMMb2jGEPF2SYcP2
+r1
+!s85 0
+!i10b 1
+!s100 >^Ez7XaYj4mzgB[FL2R5D1
+IES>_bERMMb2jGEPF2SYcP2
+!i103 1
+S1
+Z2 dE:/ECE 554/miniproj4-6/hw
+w1632962971
+8E:/ECE 554/miniproj4-6/hw/afu_tc.svh
+FE:/ECE 554/miniproj4-6/hw/afu_tc.svh
+!i122 0
+Z3 L0 3 0
+Z4 OV;L;2020.1;71
+31
+Z5 !s108 1633557780.000000
+!s107 E:/ECE 554/miniproj4-6/hw/afu_tc.svh|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/afu_tc.svh|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vfifo
+R0
+R1
+!i10b 1
+!s100 U[BDIO=NGQ^il:nZi0dRl1
+Z8 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IdjZm2GA6f7W=MQMbi_`jU1
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R2
+Z10 w1633547083
+8E:/ECE 554/miniproj4-6/hw/fifo.sv
+FE:/ECE 554/miniproj4-6/hw/fifo.sv
+!i122 1
+L0 6 34
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/ECE 554/miniproj4-6/hw/fifo.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/fifo.sv|
+!i113 1
+R6
+R7
+vfifo_set
+R0
+R1
+!i10b 1
+!s100 UEh3BHXcedYC=]P20YzZA0
+R8
+ImX99lfI1ze9bLAM_UOScX2
+R9
+S1
+R2
+R10
+8E:/ECE 554/miniproj4-6/hw/fifo_set.sv
+FE:/ECE 554/miniproj4-6/hw/fifo_set.sv
+!i122 2
+L0 9 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/ECE 554/miniproj4-6/hw/fifo_set.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/fifo_set.sv|
+!i113 1
+R6
+R7
+vfifo_tb
+R0
+R1
+!i10b 1
+!s100 J`J:jF?4e0c>Y]JOTf_U00
+R8
+IQ56o<A^gZm>0USe<`Zg=T0
+R9
+S1
+R2
+Z11 w1632673474
+8E:/ECE 554/miniproj4-6/hw/fifo_tb.sv
+FE:/ECE 554/miniproj4-6/hw/fifo_tb.sv
+!i122 3
+L0 3 95
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/ECE 554/miniproj4-6/hw/fifo_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/fifo_tb.sv|
+!i113 1
+R6
+R7
+vmem_tb
+R0
+DXx4 work 14 mem_tb_sv_unit 0 22 m5mPgJEGI[D<:iJL8_cz^0
+R1
+R9
+r1
+!s85 0
+!i10b 1
+!s100 kQ7LHV:E?J1JH03i@d9jA1
+I=UboLRCj=B_BIk]<BRdj]0
+!s105 mem_tb_sv_unit
+S1
+R2
+w1632688694
+Z12 8E:/ECE 554/miniproj4-6/hw/mem_tb.sv
+Z13 FE:/ECE 554/miniproj4-6/hw/mem_tb.sv
+!i122 5
+L0 5 151
+R4
+31
+R5
+Z14 !s107 systolic_array_tc.svh|E:/ECE 554/miniproj4-6/hw/mem_tb.sv|
+Z15 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/mem_tb.sv|
+!i113 1
+R6
+R7
+Xmem_tb_sv_unit
+R0
+R1
+Vm5mPgJEGI[D<:iJL8_cz^0
+r1
+!s85 0
+!i10b 1
+!s100 GgmK6RZl]F:OcRd>YFCHZ2
+Im5mPgJEGI[D<:iJL8_cz^0
+!i103 1
+S1
+R2
+Z16 w1633547097
+R12
+R13
+Z17 Fsystolic_array_tc.svh
+!i122 5
+R3
+R4
+31
+R5
+R14
+R15
+!i113 1
+R6
+R7
+vmemA
+R0
+R1
+!i10b 1
+!s100 bdKjM4oiGl;XY`7g5aAOQ1
+R8
+I2ShH:K]:1SKJO`l4n<b>C2
+R9
+S1
+R2
+R16
+8E:/ECE 554/miniproj4-6/hw/memA.sv
+FE:/ECE 554/miniproj4-6/hw/memA.sv
+!i122 6
+L0 3 36
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/ECE 554/miniproj4-6/hw/memA.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/memA.sv|
+!i113 1
+R6
+R7
+nmem@a
+vmemB
+R0
+Z18 !s110 1633557781
+!i10b 1
+!s100 @;1hjUAK8AcMUSL<Wkd>=2
+R8
+I=4[GR]EDhj9`?S@?`iBe>2
+R9
+S1
+R2
+w1632968000
+8E:/ECE 554/miniproj4-6/hw/memB_jacob.sv
+FE:/ECE 554/miniproj4-6/hw/memB_jacob.sv
+!i122 8
+L0 1 35
+R4
+r1
+!s85 0
+31
+Z19 !s108 1633557781.000000
+!s107 E:/ECE 554/miniproj4-6/hw/memB_jacob.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/memB_jacob.sv|
+!i113 1
+R6
+R7
+nmem@b
+vsystolic_array
+R0
+R18
+!i10b 1
+!s100 `mbFGD`<hnCOlg@YS^L310
+R8
+I;25CAc<LWdeaTkU5ffjd`1
+R9
+S1
+R2
+R10
+8E:/ECE 554/miniproj4-6/hw/systolic_array.sv
+FE:/ECE 554/miniproj4-6/hw/systolic_array.sv
+!i122 9
+L0 3 60
+R4
+r1
+!s85 0
+31
+R19
+!s107 E:/ECE 554/miniproj4-6/hw/systolic_array.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/systolic_array.sv|
+!i113 1
+R6
+R7
+vsystolic_array_tb
+R0
+DXx4 work 25 systolic_array_tb_sv_unit 0 22 fK>]i`eeG<TbgRjRfe4T=2
+R18
+R9
+r1
+!s85 0
+!i10b 1
+!s100 B2fU3f[EFF_TKjU9HgVXZ1
+I4lCWKD_k@5M2DglVglWEJ2
+!s105 systolic_array_tb_sv_unit
+S1
+R2
+R11
+Z20 8E:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv
+Z21 FE:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv
+!i122 10
+L0 5 157
+R4
+31
+R19
+Z22 !s107 systolic_array_tc.svh|E:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv|
+!i113 1
+R6
+R7
+Xsystolic_array_tb_sv_unit
+R0
+R18
+VfK>]i`eeG<TbgRjRfe4T=2
+r1
+!s85 0
+!i10b 1
+!s100 0amH2P<?PBI3>X;_<LfUb3
+IfK>]i`eeG<TbgRjRfe4T=2
+!i103 1
+S1
+R2
+R16
+R20
+R21
+R17
+!i122 10
+R3
+R4
+31
+R19
+R22
+R23
+!i113 1
+R6
+R7
+Xsystolic_array_tc_svh_unit
+R0
+R18
+V3CUJRmZS^B_1e7A=HEg2<2
+r1
+!s85 0
+!i10b 1
+!s100 <W]jk^b0E5D;X4enaL<f<1
+I3CUJRmZS^B_1e7A=HEg2<2
+!i103 1
+S1
+R2
+R16
+8E:/ECE 554/miniproj4-6/hw/systolic_array_tc.svh
+FE:/ECE 554/miniproj4-6/hw/systolic_array_tc.svh
+!i122 11
+R3
+R4
+31
+R19
+!s107 E:/ECE 554/miniproj4-6/hw/systolic_array_tc.svh|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/systolic_array_tc.svh|
+!i113 1
+R6
+R7
+vtpumac
+R0
+R18
+!i10b 1
+!s100 dkn[^zDZZ:1AR7z6>^ESh0
+R8
+I=^]`Ehe@=?RH^EIoLl<k12
+R9
+S1
+R2
+R10
+8E:/ECE 554/miniproj4-6/hw/tpumac.sv
+FE:/ECE 554/miniproj4-6/hw/tpumac.sv
+!i122 12
+L0 4 39
+R4
+r1
+!s85 0
+31
+R19
+!s107 E:/ECE 554/miniproj4-6/hw/tpumac.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/tpumac.sv|
+!i113 1
+R6
+R7
+vtpumac_tb
+R0
+R18
+!i10b 1
+!s100 ^QRz[bg^m9TZz2N0=5Q<01
+R8
+ISBKZUBbFOE2=Y<UUj5N=V1
+R9
+S1
+R2
+R16
+8E:/ECE 554/miniproj4-6/hw/tpumac_tb.sv
+FE:/ECE 554/miniproj4-6/hw/tpumac_tb.sv
+!i122 13
+L0 3 157
+R4
+r1
+!s85 0
+31
+R19
+!s107 E:/ECE 554/miniproj4-6/hw/tpumac_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/tpumac_tb.sv|
+!i113 1
+R6
+R7
+vtpuv1
+R0
+!s110 1633566782
+!i10b 1
+!s100 in`YzIcjZ]_WTc2@@Na?H1
+R8
+IbnRl3[H_PP8mOgS[<FeN_0
+R9
+S1
+R2
+w1633566773
+8E:/ECE 554/miniproj4-6/hw/tpuv1.sv
+FE:/ECE 554/miniproj4-6/hw/tpuv1.sv
+!i122 28
+L0 1 156
+R4
+r1
+!s85 0
+31
+!s108 1633566782.000000
+!s107 E:/ECE 554/miniproj4-6/hw/tpuv1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/tpuv1.sv|
+!i113 1
+R6
+R7
+vtpuv1_integration_tb
+R0
+DXx4 work 28 tpuv1_integration_tb_sv_unit 0 22 H7;HjL>:4V=VW4S[`iI<L0
+Z24 !s110 1633566538
+R9
+r1
+!s85 0
+!i10b 1
+!s100 0zhi>S^cWP[nd1cYFa_S31
+IFIH3CA>jAd:Zida=Gn?iY1
+!s105 tpuv1_integration_tb_sv_unit
+S1
+R2
+Z25 w1633566526
+Z26 8E:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv
+Z27 FE:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv
+!i122 27
+L0 9 250
+R4
+31
+Z28 !s108 1633566538.000000
+Z29 !s107 afu_tc.svh|E:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv|
+Z30 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv|
+!i113 1
+R6
+R7
+Xtpuv1_integration_tb_sv_unit
+R0
+R24
+VH7;HjL>:4V=VW4S[`iI<L0
+r1
+!s85 0
+!i10b 1
+!s100 aLUoV]2c4GCE:]3]eOmm<1
+IH7;HjL>:4V=VW4S[`iI<L0
+!i103 1
+S1
+R2
+R25
+R26
+R27
+Fafu_tc.svh
+!i122 27
+R3
+R4
+31
+R28
+R29
+R30
+!i113 1
+R6
+R7
+vtpuv1_kalty
+R0
+!s110 1633565797
+!i10b 1
+!s100 bZ@9N]6hH59VbM?cEU8YS2
+R8
+Ibad[C?46T]@4;<6KmTHHa2
+R9
+S1
+R2
+w1633564813
+8E:/ECE 554/miniproj4-6/hw/kalty tpu.sv
+FE:/ECE 554/miniproj4-6/hw/kalty tpu.sv
+!i122 22
+L0 1 166
+R4
+r1
+!s85 0
+31
+!s108 1633565797.000000
+!s107 E:/ECE 554/miniproj4-6/hw/kalty tpu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/ECE 554/miniproj4-6/hw/kalty tpu.sv|
+!i113 1
+R6
+R7

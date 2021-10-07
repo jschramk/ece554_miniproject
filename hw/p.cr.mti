@@ -1,0 +1,115 @@
+{E:/ECE 554/miniproj4-6/hw/memB_jacob.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/memB_jacob.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memB
+
+Top level modules:
+	memB
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/fifo_tb.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/fifo_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fifo_tb
+
+Top level modules:
+	fifo_tb
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/afu_old.sv} {0 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/afu_old.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Error: E:/ECE 554/miniproj4-6/hw/afu_old.sv(43): Cannot open `include file "platform_if.vh".
+** Error: E:/ECE 554/miniproj4-6/hw/afu_old.sv(44): Cannot open `include file "afu_json_info.vh".
+-- Compiling module afu
+** Error: (vlog-13069) E:/ECE 554/miniproj4-6/hw/afu_old.sv(53): near "rx": syntax error, unexpected IDENTIFIER, expecting ')'.
+** Error: E:/ECE 554/miniproj4-6/hw/afu_old.sv(62): (vlog-2163) Macro `AFU_ACCEL_UUID is undefined.
+
+} {3.0 5.0 6.0 8.0} {}} {E:/ECE 554/miniproj4-6/hw/afu_tc.svh} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/afu_tc.svh}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package afu_tc_svh_unit
+
+Top level modules:
+	--none--
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/ccip_interface_reg.sv} {0 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/ccip_interface_reg.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Error: E:/ECE 554/miniproj4-6/hw/ccip_interface_reg.sv(37): (vlog-13006) Could not find the package (ccip_if_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: (vlog-13069) E:/ECE 554/miniproj4-6/hw/ccip_interface_reg.sv(45): near "pck_cp2af_sRx_T0": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {3.0 5.0} {}} {E:/ECE 554/miniproj4-6/hw/ccip_std_afu.sv} {0 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/ccip_std_afu.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Error: E:/ECE 554/miniproj4-6/hw/ccip_std_afu.sv(34): Cannot open `include file "platform_if.vh".
+-- Compiling module ccip_std_afu
+** Error: (vlog-13069) E:/ECE 554/miniproj4-6/hw/ccip_std_afu.sv(50): near "pck_cp2af_sRx": syntax error, unexpected IDENTIFIER, expecting ')'.
+
+} {3.0 4.0 5.0 6.0} {}} {E:/ECE 554/miniproj4-6/hw/fifo.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/fifo.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/mem_tb.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/mem_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package mem_tb_sv_unit
+-- Compiling module mem_tb
+
+Top level modules:
+	mem_tb
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/systolic_array_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package systolic_array_tb_sv_unit
+-- Compiling module systolic_array_tb
+
+Top level modules:
+	systolic_array_tb
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/kalty tpu.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/kalty tpu.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tpuv1_kalty
+
+Top level modules:
+	tpuv1_kalty
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/fifo_set.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/fifo_set.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fifo_set
+
+Top level modules:
+	fifo_set
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/systolic_array.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/systolic_array.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module systolic_array
+
+Top level modules:
+	systolic_array
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/tpuv1_integration_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package tpuv1_integration_tb_sv_unit
+-- Compiling module tpuv1_integration_tb
+
+Top level modules:
+	tpuv1_integration_tb
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/memB.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/memB.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memB
+
+Top level modules:
+	memB
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/tpumac.sv} {1 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/tpumac.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tpumac
+
+Top level modules:
+	tpumac
+
+} {} {}} {E:/ECE 554/miniproj4-6/hw/afu.sv} {0 {vlog -work work -sv -stats=none {E:/ECE 554/miniproj4-6/hw/afu.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Error: E:/ECE 554/miniproj4-6/hw/afu.sv(43): Cannot open `include file "platform_if.vh".
+** Error: E:/ECE 554/miniproj4-6/hw/afu.sv(44): Cannot open `include file "afu_json_info.vh".
+-- Compiling module afu
+** Error: (vlog-13069) E:/ECE 554/miniproj4-6/hw/afu.sv(53): near "rx": syntax error, unexpected IDENTIFIER, expecting ')'.
+** Error: E:/ECE 554/miniproj4-6/hw/afu.sv(62): (vlog-2163) Macro `AFU_ACCEL_UUID is undefined.
+
+} {3.0 5.0 6.0 8.0} {}}

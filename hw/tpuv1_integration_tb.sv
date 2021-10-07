@@ -50,6 +50,9 @@ module tpuv1_integration_tb();
                        ) satc;
    
    initial begin
+
+      $display("Starting");
+
 	  clk = 1'b0;
 	  rst_n = 1'b1;
 	  errors = 0;
@@ -76,7 +79,9 @@ module tpuv1_integration_tb();
 		        $display("Error! Reset was not conducted properly. Expected: 0, Got: %d @ address %h", dataOut, addr); 
            end
       end
-      
+      if (errors == 0) begin
+         $display("Reset was conducted Properly");
+      end
 
       for(int test=0;test<TESTS;++test) begin
 
@@ -110,6 +115,9 @@ module tpuv1_integration_tb();
          end
          
         @(posedge clk);
+
+
+   $display("Line 120");
 
 	Bbaddr = 'h200;
 	Abaddr = 'h100;
@@ -148,6 +156,8 @@ module tpuv1_integration_tb();
 		addr = 0;
 	end
 
+   $display("Line 159");
+
 	r_w = 1'b0;
 	addr = 'h400;
 	r_w = 1'b1;
@@ -165,13 +175,25 @@ module tpuv1_integration_tb();
         // For each row, rebuild Cout
 	ColNo = 0;
 	RowNo = 0;
+
+   $display("Line 179");
+
 	for(addr_test = 'h300; addr_test < 'h380; addr_test += 'h10) begin
+
+      $display("Low word");
 
         // Read loword
             addr = addr_test;
+
+      $display("between");
+
             #1 loWord = dataOut;
 
+      $display("after");
+
             @(posedge clk);
+
+      $display("High word");
 
             // Read hiword
             addr = addr_test + 8;
@@ -182,6 +204,8 @@ module tpuv1_integration_tb();
             Cout[RowNo] = {hiWord[63:48], hiWord[47:32], hiWord[31:16], hiWord[15:0], loWord[63:48], loWord[47:32], loWord[31:16], loWord[15:0]};
             ++RowNo;
 	end
+
+   $display("Line 196");
 
         @(posedge clk);
         for(RowNo = 0; RowNo < DIM; ++RowNo) begin
