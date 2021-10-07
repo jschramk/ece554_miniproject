@@ -348,26 +348,26 @@ int main(int argc, char *argv[])
     }
 
     // Now try it with the AFU.
-    for(int i = 0; i < DIM; i += 8) {
+    for(int row_offset = 0; row_offset < DIM; row_offset += 8) {
 
-      for(int j = 0; j < DIM; j += 8) {
+      for(int col_offset = 0; col_offset < DIM; col_offset += 8) {
 
-        for(int ii = 0; ii < 8; ii++) {
-          send_row_C(ii, output[i + ii][j], afu);
-        }
+        for(int row = 0; row < 8; row++) {
 
-        for(int k = 0; k < DIM; k += 8) {
+          send_row_C(row, output[(row_offset + row)*DIM + col_offset], afu);
 
-          for(int ii = 0; ii < 8; ii++) {
-            send_row_A(ii, A_vals[i+ii][k], afu);
-            send_row_B(ii, B_vals[k+ii][j], afu);
-          }
-          afu.write(0x0400, 100);
+          send_row_A(row, A_vals[(row_offset + row)*DIM + col_offset], afu);
+
+          send_row_B(row, B_vals[(row_offset + row)*DIM + col_offset], afu);
 
         }
 
-        for(int ii = 0; ii < 8; ii++) {
-          unpack_from_C(ii, output[i + ii][j], afu);
+        afu.write(0x0400, 100);
+
+        for(int row = 0; row < 8; row++) {
+
+          unpack_from_C(row, output[(row_offset + row)*DIM + col_offset], afu);
+
         }
 
       }
