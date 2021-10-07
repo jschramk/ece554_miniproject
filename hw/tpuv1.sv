@@ -100,22 +100,26 @@ module tpuv1
 
 	// Control logic
 	always_comb begin
-		write_a <= 0;
-		write_b <= 0;
-		write_c <= 0;
-		start <= 0;
-		readC <= 0;
-
+		write_a = 0;
+		write_b = 0;
+		write_c = 0;
+		start = 0;
+		readC = 0;
+		
 		casex(addr)
 			'h1xx:
-				write_a <= r_w;
+				if (r_w) begin
+					write_a = 1; 
+				end
 
 			'h2xx:
-				write_b <= r_w;
+				if (r_w) begin
+					write_b = 1; 
+				end
 
 			'h3x0:
 				if (r_w) begin
-					write_c <= 1;
+					write_c = 1;
 				end else begin
 					for (integer i = 0; i < DIM / 2; i++) begin
 						readC |= (macCOut[i] << (i * BITS_C));
@@ -124,7 +128,7 @@ module tpuv1
 
 			'h3x8:
 				if (r_w) begin
-					write_c <= 1;
+					write_c = 1;
 				end else begin
 					for (integer i = 0; i < DIM / 2; i++) begin
 						readC |= (macCOut[i + DIM/2] << (i * BITS_C));
@@ -132,7 +136,9 @@ module tpuv1
 				end
 
 			'h400:
-				start <= r_w;
+				if (r_w) begin
+					start = 1; // Starts counter
+				end
 		endcase
 
 	end
