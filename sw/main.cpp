@@ -348,7 +348,38 @@ int main(int argc, char *argv[])
     }
 
     // Now try it with the AFU.
+    for(int i = 0; i < DIM; i += 8) {
 
+      for(int j = 0; j < DIM; j += 8) {
+
+        for(int ii = 0; ii < 8; ii++) {
+          send_row_C(ii, output[i + ii][j], afu);
+        }
+
+        for(int k = 0; k < DIM; k += 8) {
+
+          for(int ii = 0; ii < 8; ii++) {
+            send_row_A(ii, A_vals[i+ii][k], afu);
+            send_row_B(ii, B_vals[k+ii][j], afu);
+          }
+          afu.write(0x0400, 100);
+
+        }
+
+        for(int ii = 0; ii < 8; ii++) {
+          unpack_from_C(ii, output[i + ii][j], afu);
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+/*
     // Write each value of A down.
     fprintf(stdout, "Loading A into AFU...\n");
     for (ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
@@ -366,17 +397,18 @@ int main(int argc, char *argv[])
     // Calculate
     fprintf(stdout, "Performing Calculation...\n");
     afu.write(0x0400, 100);
+*/
 
     // Do we have to sleep?
-    usleep(1000*1000);
+    //usleep(1000*1000);
 
     // Read Values.
     fprintf(stdout, "Reading Output from C...\n");
 
-    for (ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
+    /*for (ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
     {
       unpack_from_C(c_r, output[c_r], afu);
-    }
+    }*/
 
     // Compare.
     fprintf(stdout, "Calculation finished. Testing values...\n");
