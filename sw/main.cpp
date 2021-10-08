@@ -186,14 +186,15 @@ using namespace std;
 
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
-#define DIM 16
+#define DIM_FULL 16
+#define DIM 8
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
-AB_TYPE A_vals[DIM][DIM];
-AB_TYPE B_vals[DIM][DIM];
-C_TYPE output[DIM][DIM];
-C_TYPE output_reference[DIM][DIM];
+AB_TYPE A_vals[DIM_FULL][DIM_FULL];
+AB_TYPE B_vals[DIM_FULL][DIM_FULL];
+C_TYPE output[DIM_FULL][DIM_FULL];
+C_TYPE output_reference[DIM_FULL][DIM_FULL];
 
 // Reflect Endian
 template <int width, class BT>
@@ -322,9 +323,9 @@ int main(int argc, char *argv[])
     fprintf(stdout, "FULL SYSTEM TEST\n---------------\n");
     fprintf(stdout, "Populating A and B...\n");
     // Generate A vals, B vals.
-    for (int y_ind = 0; y_ind < DIM; ++y_ind)
+    for (int y_ind = 0; y_ind < DIM_FULL; ++y_ind)
     {
-      for (int x_ind = 0; x_ind < DIM; ++x_ind)
+      for (int x_ind = 0; x_ind < DIM_FULL; ++x_ind)
       {
         A_vals[y_ind][x_ind] = static_cast<int8_t>(rand() % 255);
         B_vals[y_ind][x_ind] = static_cast<int8_t>(rand() % 255);
@@ -333,14 +334,14 @@ int main(int argc, char *argv[])
 
     fprintf(stdout, "Calculating reference values of C...\n");
     // Calculate reference C values.
-    for (int y_ind = 0; y_ind < DIM; ++y_ind)
+    for (int y_ind = 0; y_ind < DIM_FULL; ++y_ind)
     {
-      for (int x_ind = 0; x_ind < DIM; ++x_ind)
+      for (int x_ind = 0; x_ind < DIM_FULL; ++x_ind)
       {
         // Calculate C
         output_reference[y_ind][x_ind] = 0;
 
-        for (ptrdiff_t wh = 0; wh < DIM; ++wh)
+        for (ptrdiff_t wh = 0; wh < DIM_FULL; ++wh)
         {
           output_reference[y_ind][x_ind] += A_vals[y_ind][wh] * B_vals[wh][x_ind];
         }
@@ -348,11 +349,11 @@ int main(int argc, char *argv[])
     }
 
     // Now try it with the AFU.
-    for(int row_offset = 0; row_offset < DIM; row_offset += 8) {
+    for(int row_offset = 0; row_offset < DIM_FULL; row_offset += 8) {
 
-      for(int col_offset = 0; col_offset < DIM; col_offset += 8) {
+      for(int col_offset = 0; col_offset < DIM_FULL; col_offset += 8) {
 
-        for(int row = 0; row < 8; row++) {
+        for(int row = 0; row < DIM; row++) {
 
           send_row_C(row, &(output[(row_offset + row)][col_offset]), afu);
 
@@ -364,7 +365,7 @@ int main(int argc, char *argv[])
 
         afu.write(0x0400, 100);
 
-        for(int row = 0; row < 8; row++) {
+        for(int row = 0; row < DIM; row++) {
 
           unpack_from_C(row, &(output[(row_offset + row)][col_offset]), afu);
 
@@ -412,9 +413,9 @@ int main(int argc, char *argv[])
 
     // Compare.
     fprintf(stdout, "Calculation finished. Testing values...\n");
-    for (int r = 0; r < DIM; ++r)
+    for (int r = 0; r < DIM_FULL; ++r)
     {
-      for (int c = 0; c < DIM; ++c)
+      for (int c = 0; c < DIM_FULL; ++c)
       {
         fprintf(stdout, "row: %d, col: %d | got: %hx, expected %hx", r, c, output[r][c], output_reference[r][c]);
         fflush(stdout);
