@@ -354,11 +354,11 @@ int main(int argc, char *argv[])
 
         for(int row = 0; row < 8; row++) {
 
-          send_row_C(row, output[(row_offset + row)*DIM + col_offset], afu);
+          send_row_C(row, &(output[(row_offset + row)][col_offset]), afu);
 
-          send_row_A(row, A_vals[(row_offset + row)*DIM + col_offset], afu);
+          send_row_A(row, &(A_vals[(row_offset + row)][col_offset]), afu);
 
-          send_row_B(row, B_vals[(row_offset + row)*DIM + col_offset], afu);
+          send_row_B(row, &(B_vals[(row_offset + row)][col_offset]), afu);
 
         }
 
@@ -366,7 +366,7 @@ int main(int argc, char *argv[])
 
         for(int row = 0; row < 8; row++) {
 
-          unpack_from_C(row, output[(row_offset + row)*DIM + col_offset], afu);
+          unpack_from_C(row, &(output[(row_offset + row)][col_offset]), afu);
 
         }
 
