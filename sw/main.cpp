@@ -186,7 +186,7 @@ using namespace std;
 
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
-#define DIM 64
+#define DIM 16
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
