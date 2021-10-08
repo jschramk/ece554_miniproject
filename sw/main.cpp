@@ -189,7 +189,7 @@ typedef int16_t C_TYPE;
 #define DIM_FULL 64
 #define DIM 8
 #define MAX_VAL _UI16_MAX
-#define DEBUG true
+#define DEBUG false
 
 struct timespec t1, t2, t3, t4;
 double time_tot = 0;
