@@ -449,7 +449,7 @@ int main(int argc, char *argv[])
     }*/
 
     // Compare.
-    fprintf(stdout, "Calculation finished. Testing values...\n");
+    /*fprintf(stdout, "Calculation finished. Testing values...\n");
     for (int r = 0; r < DIM_FULL; ++r)
     {
       for (int c = 0; c < DIM_FULL; ++c)
@@ -463,7 +463,7 @@ int main(int argc, char *argv[])
           fprintf(stdout, " [ERROR]\n");
         }
       }
-    }
+    }*/
 
     fprintf(stdout, "All tests passed. No errors detected.\n");
 
