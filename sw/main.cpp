@@ -411,10 +411,10 @@ int main(int argc, char *argv[])
     ops_rate = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_tot;
     ops_rate_comp = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_comp;
 
-    double ops_rate = ops_rate / 1000000000;
-    double ops_rate_comp = ops_rate_comp / 1000000000;
+    double gops_rate = ops_rate / 1000000000;
+    double gops_rate_comp = ops_rate_comp / 1000000000;
 
-    fprintf(stdout, "TIMING REPORT: ops rate: %f Gops, compute ops rate: %f\n Gops", ops_rate, ops_rate_comp);
+    fprintf(stdout, "TIMING REPORT: ops rate: %f Gops, compute ops rate: %f\n Gops", gops_rate, gops_rate_comp);
 
 
 /*
