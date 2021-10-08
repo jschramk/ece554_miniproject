@@ -353,23 +353,28 @@ int main(int argc, char *argv[])
 
       for(int col_offset = 0; col_offset < DIM_FULL; col_offset += 8) {
 
-        for(int row = 0; row < DIM; row++) {
+        for(int dot_offset; dot_offset < DIM; dot_offset++) {
 
-          send_row_C(row, &(output[(row_offset + row)][col_offset]), afu);
+          for(int row = 0; row < DIM; row++) {
 
-          send_row_A(row, &(A_vals[(row_offset + row)][col_offset]), afu);
+            send_row_C(row, output[row_offset + row] + col_offset, afu);
 
-          send_row_B(row, &(B_vals[(row_offset + row)][col_offset]), afu);
+            send_row_A(row, A_vals[row_offset + row] + dot_offset, afu);
+
+            send_row_B(row, B_vals[dot_offset + row] + col_offset, afu);
+
+          }
+
+          afu.write(0x0400, 100);
+
+          for(int row = 0; row < DIM; row++) {
+
+            unpack_from_C(row, output[row_offset + row] + col_offset, afu);
+
+          }
 
         }
 
-        afu.write(0x0400, 100);
-
-        for(int row = 0; row < DIM; row++) {
-
-          unpack_from_C(row, &(output[(row_offset + row)][col_offset]), afu);
-
-        }
 
       }
 
