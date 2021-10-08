@@ -404,17 +404,17 @@ int main(int argc, char *argv[])
 
     }
 
-    clock_gettime(CLOCK_MONOTONIC, &t3);
+    clock_gettime(CLOCK_MONOTONIC, &t4);
 
     time_tot = getTime(t1, t4);
 
     ops_rate = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_tot;
     ops_rate_comp = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_comp;
 
-    double gops_rate = ops_rate / 1000000000;
-    double gops_rate_comp = ops_rate_comp / 1000000000;
+    double tops_rate = ops_rate / 1000000000000;
+    double tops_rate_comp = ops_rate_comp / 1000000000000;
 
-    fprintf(stdout, "TIMING REPORT: ops rate: %f Gops, compute ops rate: %f\n Gops", gops_rate, gops_rate_comp);
+    fprintf(stdout, "TIMING REPORT:\nTops rate: %f Tops\nCompute tops rate: %f Tops\n", tops_rate, tops_rate_comp);
 
 
 /*
