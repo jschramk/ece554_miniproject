@@ -191,6 +191,11 @@ typedef int16_t C_TYPE;
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
+struct timespec t1, t2, t3, t4;
+double time_tot = 0;
+double time_comp = 0;
+double ops_rate, ops_rate_comp;
+
 AB_TYPE A_vals[DIM_FULL][DIM_FULL];
 AB_TYPE B_vals[DIM_FULL][DIM_FULL];
 C_TYPE output[DIM_FULL][DIM_FULL];
@@ -235,6 +240,14 @@ void send_row_X(uint16_t row, AB_TYPE *vals, AFU &afu)
 
   // Do MMIO Write of Data Word
   afu.write(real_addr, data_word_cal);
+}
+
+static inline double getTime(struct  timespec start, struct timespec end) {
+
+  uint64_t diff = 1000000000L * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
+
+  return (double) diff / (double) 1000000000L;
+
 }
 
 void send_row_A(uint16_t row, AB_TYPE *vals, AFU &afu) { send_row_X<0x100>(row, vals, afu); }
@@ -348,6 +361,8 @@ int main(int argc, char *argv[])
       }
     }
 
+    clock_gettime(CLOCK_MONOTONIC, &t1);
+
     // Now try it with the AFU.
     for(int i = 0; i < DIM_FULL; i += 8) {
 
@@ -369,7 +384,13 @@ int main(int argc, char *argv[])
 
           }
 
+          clock_gettime(CLOCK_MONOTONIC, &t2);
+
           afu.write(0x0400, 100);
+
+          clock_gettime(CLOCK_MONOTONIC, &t3);
+
+          time_comp += getTime(t2, t3);
 
         }
 
@@ -383,9 +404,17 @@ int main(int argc, char *argv[])
 
     }
 
+    clock_gettime(CLOCK_MONOTONIC, &t3);
 
+    time_tot = getTime(t1, t4);
 
+    ops_rate = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_tot;
+    ops_rate_comp = 2 * DIM_FULL * DIM_FULL * DIM_FULL / time_comp;
 
+    double tops_rate = ops_rate / 1000000000000;
+    double tops_rate_comp = ops_rate_comp / 1000000000000;
+
+    fprintf(stdout, "TIMING REPORT: tops rate: %f Tops, compute tops rate: %f\n Tops", tops_rate, tops_rate_comp);
 
 
 /*
@@ -472,5 +501,6 @@ int main(int argc, char *argv[])
 
   return EXIT_FAILURE;
 }
+
 
 
