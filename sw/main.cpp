@@ -353,7 +353,7 @@ int main(int argc, char *argv[])
 
       for(int col_offset = 0; col_offset < DIM_FULL; col_offset += 8) {
 
-        for(int dot_offset; dot_offset < DIM; dot_offset++) {
+        for(int dot_offset; dot_offset < DIM_FULL; dot_offset += 8) {
 
           for(int row = 0; row < DIM; row++) {
 
@@ -374,7 +374,6 @@ int main(int argc, char *argv[])
           }
 
         }
-
 
       }
 
